@@ -9,7 +9,9 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  // Registra un usuario
   registerUser(user: any) {
+    // Realiza una petición POST al API con el usuario proporcionado
     return this.http.post(this.apiUrl, user);
   }
 }

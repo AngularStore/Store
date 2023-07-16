@@ -20,6 +20,7 @@ export class RegisterComponent {
   constructor(private userService: UserService) { }
 
   register() {
+    // Registra al usuario utilizando el servicio UserService
     this.userService.registerUser(this.user)
       .subscribe(
         response => {
