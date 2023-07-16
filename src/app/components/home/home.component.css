@@ -1,5 +1,6 @@
 .containHome {
     margin-top: 175px;
+    margin-left: 130px;
     display:flex;
 }
 .descriptionHome{
@@ -30,6 +31,10 @@
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+    cursor: pointer;
+}
+.descriptionHome button:hover{
+    background: #1b1b1b 0% 0% no-repeat padding-box;
 }
 .imageHome img {
     width: 773px;
