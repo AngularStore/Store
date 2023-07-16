@@ -12,6 +12,7 @@ export class NavComponent {
 
   public toggleNavbar(): void {
     this.showNavbar = !this.showNavbar;
+    console.log(this.showNavbar);
   }
 
 }
