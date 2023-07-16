@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { NgImageSliderModule } from 'ng-image-slider';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +15,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
   ],
   imports: [
     BrowserModule,
-    NgImageSliderModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
