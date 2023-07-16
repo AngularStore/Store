@@ -1,15 +1,15 @@
 <footer>
     <div class="footerContainer">//footerContainer is a class in footer.component.css
-        <div class="footerLegal">//
-            <p>© {{ currentYear }} KOAJ, Inc. All Rights Reserved</p>
+        <div class="footerLegal">//footerLegal is a class in footer.component.css
+            <p>© {{ currentYear }} KOAJ, Inc. All Rights Reserved</p>//currentYear is a variable in footer.component.ts
         </div>
     
-        <div class="footerDevelopers">
-            <p>Developers:</p>
-            <ul>
-                <li *ngFor="let developer of developers">
-                    <a [href]="developer.github" target="_blank" rel="noopener noreferrer">
-                         {{ developer.name }}
+        <div class="footerDevelopers">//footerDevelopers is a class in footer.component.css
+            <p>Developers:</p>//Developers: is a string
+            <ul>//unordered list
+                <li *ngFor="let developer of developers">//developer is a variable in footer.component.ts
+                    <a [href]="developer.github" target="_blank" rel="noopener noreferrer">//developer.github is a variable in footer.component.ts
+                         {{ developer.name }}//developer.name is a variable in footer.component.ts
                      </a>
                 </li>
             </ul>

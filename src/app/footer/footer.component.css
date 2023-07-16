@@ -1,16 +1,57 @@
-.footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
+/* Estilos del css para el footer*/
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 2%;
+    width: 100%;
+    position:absolute;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  p {
+  .footerDevelopers {
     font-size: 14px;
-    color: #888;
+    color: white;
+  }
+  
+  .footerDevelopers p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .footerDevelopers ul {
+    font-size: 12px;
+    list-style: none;
+    column-count: 8;
+
+  }
+  
+  .footerDevelopers li {
+    margin-bottom: 20px;
+  }
+  
+  li {
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .footerDevelopers a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footerDevelopers a:hover {
+    text-decoration: underline;
+  }
+
+  .footerLegal {
+    font-size: 14px;
+    color: white;
+    margin-top: 8px;
+  }
+  
+  footer {
+    background-color: black;
   }
   
