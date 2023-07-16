@@ -1,45 +1,65 @@
+html
 <div class="registerContainer">
+  <!-- Contenedor principal del formulario de registro -->
   <div class="principalRegisterContainer">
+    <!-- Contenedor principal del formulario de registro -->
     <div class="titleRegisterContainer">
+      <!-- Contenedor del título del formulario de registro -->
       <h1>Register</h1>
+      <!-- Título del formulario de registro -->
     </div>
     <div class="principalContainerRegisterFrom">
+      <!-- Contenedor principal del formulario de registro -->
       <form (submit)="register()">
+        <!-- Formulario de registro con una función de registro asociada -->
         <div class="usernameRegisterContainer">
+          <!-- Contenedor del campo de nombre de usuario -->
           <label>Username:</label>
+          <!-- Etiqueta del campo de nombre de usuario -->
           <input type="text" id="usernameRegister" name="username" [(ngModel)]="user.username" required>
+          <!-- Campo de entrada de texto para el nombre de usuario -->
         </div> 
-      
-        <div class="paswordRegisterContainer">
+         <div class="paswordRegisterContainer">
+          <!-- Contenedor del campo de contraseña -->
           <label>Password:</label>
+          <!-- Etiqueta del campo de contraseña -->
           <input type="password" id="passwordRegister" name="password" [(ngModel)]="user.password" required>
+          <!-- Campo de entrada de texto para la contraseña -->
         </div>
-
-        <div class="fullNameRegisterContainer">
+         <div class="fullNameRegisterContainer">
+          <!-- Contenedor del campo de nombre completo -->
           <label>Full Name:</label>
+          <!-- Etiqueta del campo de nombre completo -->
           <input type="text" id="fullNameRegister" name="fullname" [(ngModel)]="user.fullName" required>
+          <!-- Campo de entrada de texto para el nombre completo -->
         </div>
-      
-        <div class="emailRegisterContainer">
+         <div class="emailRegisterContainer">
+          <!-- Contenedor del campo de correo electrónico -->
           <label>Email:</label>
+          <!-- Etiqueta del campo de correo electrónico -->
           <input type="email" id="emailRegister" name="email" [(ngModel)]="user.email" required>
+          <!-- Campo de entrada de texto para el correo electrónico -->
         </div>
-      
-        <div class="phoneRegisterContainer">
+         <div class="phoneRegisterContainer">
+          <!-- Contenedor del campo de teléfono -->
           <label>Phone:</label>
+          <!-- Etiqueta del campo de teléfono -->
           <input type="text" id="phoneRegister" name="phone" [(ngModel)]="user.phone" required>
+          <!-- Campo de entrada de texto para el teléfono -->
         </div>
-      
-        <div class="adressRegisterContainer">
+         <div class="adressRegisterContainer">
+          <!-- Contenedor del campo de dirección -->
           <label>Address:</label>
+          <!-- Etiqueta del campo de dirección -->
           <input type="text" id="adressRegister" name="address" [(ngModel)]="user.address" required>
+          <!-- Campo de entrada de texto para la dirección -->
         </div>
-      
-        <div class="buttonRegisterContainer">
+         <div class="buttonRegisterContainer">
+          <!-- Contenedor del botón de registro -->
           <button type="submit" id="buttonRegister" >Register</button>
+          <!-- Botón de registro -->
         </div>
       </form>
     </div>
   </div>
 </div>
-   

@@ -1,3 +1,4 @@
+css
 .registerContainer {
     background-color: white;
     width: 100vw;
@@ -6,20 +7,20 @@
     justify-content: center;
     align-items: center;
 }
-
-.titleRegisterContainer {
+/* Estilo del contenedor de registro */
+ .titleRegisterContainer {
     text-align: center;
     margin: 20px 0 20px 0;
     font-family: Helvetica, sans-serif;
     font: bold;
     font-weight: bold;
 }
-
-.titleRegisterContainer h1 {
+/* Estilo del título del contenedor de registro */
+ .titleRegisterContainer h1 {
     width: 100%;
 }
-
-.principalRegisterContainer {
+/* Estilo del título h1 dentro del contenedor de registro */
+ .principalRegisterContainer {
     display: block;
     background-color: white;
     width: 47%;
@@ -29,21 +30,21 @@
     border-radius: 50px;
     opacity: 1;
 }
-
-.buttonRegisterContainer {
+/* Estilo del contenedor principal de registro */
+ .buttonRegisterContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.principalContainerRegisterFrom form {
+/* Estilo del contenedor de botón de registro */
+ .principalContainerRegisterFrom form {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
-
-.usernameRegisterContainer,
+/* Estilo del contenedor principal del formulario de registro */
+ .usernameRegisterContainer,
 .paswordRegisterContainer,
 .fullNameRegisterContainer,
 .emailRegisterContainer,
@@ -57,8 +58,8 @@
     flex-direction: column;
     margin  : 10px 10px;
 }
-
-.usernameRegisterContainer input,
+/* Estilos de los contenedores de campos de registro (nombre de usuario, contraseña, nombre completo, etc.) */
+ .usernameRegisterContainer input,
 .paswordRegisterContainer input,
 .fullNameRegisterContainer input,
 .emailRegisterContainer input,
@@ -67,8 +68,8 @@
     padding: 0 10px;
     font-size: 20px;
 }
-
-.buttonRegisterContainer {
+/* Estilos de los campos de entrada de texto dentro de los contenedores de registro */
+ .buttonRegisterContainer {
     font-family: Helvetica, sans-serif;
     font: bold;
     font-weight: bold;
@@ -77,18 +78,18 @@
     flex-direction: column;
     margin  : 5px 10px;
 }
-
-.buttonRegisterContainer button{
+/* Estilo del contenedor de botón de registro */
+ .buttonRegisterContainer button{
     background-color: transparent;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
-#buttonRegister:hover {
+/* Estilos del botón de registro */
+ #buttonRegister:hover {
     background-color: #131313;
 }
-
+/* Estilo cuando el cursor se sitúa sobre el botón de registro */
 #usernameRegister,
 #passwordRegister,
 #fullNameRegister,
@@ -103,11 +104,12 @@
     border-radius: 23px;
     opacity: 1;
 }
-
-#buttonRegister{
+/* Estilos de los campos de entrada de texto de registro */
+ #buttonRegister{
     color: white;
     width: 100%;
     height: 40px;
     background: #000000;
     border-radius: 10px;
 }
+/* Estilos del botón de registro */
