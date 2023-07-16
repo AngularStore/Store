@@ -1,23 +1,23 @@
-<div class="container" *ngIf="product">                             <!-- Si existe el producto -->
-                                                           
-        <div class="principalContainer">                            <!-- Muestra el producto -->
+<div class="container" *ngIf="product">         <!-- *ngIf="product" para que no se muestre el componente hasta que se haya cargado el producto -->
+  
+  <div class="principalContainer">              <!-- contenedor principal-->
+    
+    <div class="images">                        <!-- contenedor de imagenes -->         
+      <img class="mainImage" [src]="selectedImage || product.productImages[0].imageURL" alt="Card image cap"> <!-- [src]="selectedImage || product.productImages[0].imageURL" para que se muestre la imagen seleccionada o la primera imagen del array -->
+      <div class="littleImages">                <!-- contenedor de imagenes pequeñas -->
+        <img *ngFor="let image of product.productImages" [src]="image.imageURL" alt="" (click)="selectImage(image.imageURL)" [class.selected]="image.imageURL === selectedImage"> <!-- *ngFor="let image of product.productImages" para que se muestren todas las imagenes del array -->
+      </div>                                    <!-- [src]="image.imageURL" para que se muestren las imagenes del array -->
+    </div>
 
-          <div class="images">
-              <img class="mainImage" [src]="selectedImage || product.mainImage" alt="Card image cap"> <!-- Mostrar la imagen seleccionada o la imagen principal -->
-              <div class="littleImages">                          <!-- Muestra las imagenes pequeñas -->     
-                <img *ngFor="let image of product.images" [src]="image" alt="" (click)="selectImage(image)" [class.selected]="image === selectedImage">
-              </div>
-          </div>
+    <div class="description">                   <!-- contenedor de descripcion -->
+      <h2 class="title">{{ product.productName }}</h2>  <!-- {{ product.productName }} para que se muestre el nombre del producto -->
+      <p class="descriptionText">{{ product.description }}</p>  <!-- {{ product.description }} para que se muestre la descripcion del producto -->
+      <div class="below">                       <!-- contenedor de precio y boton -->
+        <p class="price">${{ product.price }}</p> <!-- {{ product.price }} para que se muestre el precio del producto -->
+        <a href="#" class="btn-primary">Add to cart</a> <!-- boton -->
+      </div>                                    <!-- fin contenedor de precio y boton -->
+    </div>
 
-          <div class="description">                                 <!-- Muestra el cuerpo del producto -->
-              <h2 class="title">{{ product.name }}</h2>      <!-- Muestra el nombre del producto -->
-              <p class="descriptionText">{{ product.description }}</p>  <!-- Muestra la descripción del producto -->
-              <div class="below">                                 <!-- Muestra el precio y el botón de añadir al carrito -->
-                  <p class="price">${{ product.price.toLocaleString() }}</p>  <!-- Muestra el precio del producto -->
-                  <a href="#" class="btn btn-primary">Add to cart</a> <!-- Botón de añadir al carrito -->                
-              </div>    
-          </div> 
-
-        </div>
+  </div>
 
 </div>

@@ -1,46 +1,32 @@
-import { Component, OnInit } from '@angular/core';                // Importa dependencias de Angular 
-import { Observable } from 'rxjs';                                // Importa la clase Observable           
+import { Component, OnInit } from '@angular/core';                // Importa dependencias de Angular         
+import { HttpClient } from '@angular/common/http';                // Importa la clase HttpClient
 
-@Component({
-  selector: 'app-product-page',                                   // Selector del componente
-  templateUrl: './product-page.component.html',                   // Template asociado al componente       
-  styleUrls: ['./product-page.component.css']                     // Estilos asociados al componente
+@Component({                                                      // Decorador Component                     
+  selector: 'app-product-page',                                   // Selector del componente para ser usado en el HTML       
+  templateUrl: './product-page.component.html',                   // Ruta del archivo HTML
+  styleUrls: ['./product-page.component.css']                     // Ruta del archivo CSS
 })
-export class ProductPageComponent implements OnInit {
-  product: any;                                                   // Variable para almacenar los datos del producto
-  selectedImage: string = '';                                     // Nueva propiedad para la imagen seleccionada
 
-  ngOnInit() {
-    this.fetchProduct().subscribe((response: any) => {            // Llama al método 'fetchProduct' y se suscribe a la respuesta
-      this.product = response;                                    // Asigna la respuesta simulada a la variable 'product'
+export class ProductPageComponent implements OnInit {             // Exporta la clase ProductPageComponent e implementa la interfaz OnInit para inicializar el componente al cargar la página
+  product: any;                                                   // Variable para almacenar los datos del producto obtenidos de la API de Koaj
+  selectedImage: string = '';                                     // Inicializa selectedImage con un valor predeterminado vacío
+
+  constructor(private http: HttpClient) {}                        // Inicializa la clase HttpClient para hacer peticiones HTTP           
+
+  ngOnInit() {                                                    // Función que se ejecuta al iniciar el componente
+    this.fetchProduct();                                          // Llama a la función para obtener los datos del producto
+  }
+
+  fetchProduct() {                                                // Función para obtener los datos del producto                    
+    const productId = '1';                                        // ID del producto a obtener
+
+    this.http.get(`https://koajstoreapi.onrender.com/api/products/${productId}`).subscribe((response: any) => {  // Hace una petición GET a la API
+      this.product = response;                                    // Asigna la respuesta de la API a la variable 'product'
+      console.log(this.product);                                  // Imprime en consola los datos del producto
     });
   }
 
-  fetchProduct(): Observable<any> {
-    // Simulación de la llamada a la API y la respuesta del producto
-    return new Observable(observer => {                           // Crea un nuevo Observable
-      const product = {                                           // Crea un objeto con los datos del producto
-        name: 'Camiseta polo tela jersey estampada con cuello tejido.',                         // Nombre del producto             
-        description: 'Camiseta polo para hombre, con estampado miniprint, puños en rectilineo y cuello camisero, pechera incluida con tres botones para cierre, cogotera y marquilla tejida, cuenta con una confeccion en tela jersey. Esta prenda tiene un diseño versátil que complementará tus looks en todas tus salidas con amigos.',                // Descripción del producto     
-        price: 59900,                                               // Precio del producto               
-        mainImage: 'https://cdn.koaj.co/167554-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg',  // Imagen principal del producto
-        images: [                                                 // Imágenes del producto             
-          'https://cdn.koaj.co/167555-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg',
-          'https://cdn.koaj.co/167556-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg',
-          'https://cdn.koaj.co/167557-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg'
-        ]
-      };
-
-      // Simula un retardo de 1 segundo antes de devolver la respuesta
-      setTimeout(() => {                                          // Simula un retardo de 1 segundo             
-        observer.next(product);                                   // Devuelve la respuesta del producto
-        observer.complete();                                      // Finaliza el Observable         
-      }, 1000);                                                   // Tiempo de retardo en milisegundos
-    }); 
-  }
-
-  selectImage(image: string) {                                    // Método para seleccionar una imagen             
+  selectImage(image: string) {                                    // Función para seleccionar una imagen del producto
     this.selectedImage = image;                                   // Asigna la imagen seleccionada a la variable 'selectedImage'
-  } 
-
+  }
 }
