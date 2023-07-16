@@ -1,10 +1,8 @@
 /* Estilos del css para el footer */
 
-
-
-*{
-  margin-top: 10px;
-  padding: 0;
+*{/* Estilos para todos los elementos */
+  margin-top: 10px;/* Margen superior para todos los elementos */
+  padding: 0;/* Espaciado interno para todos los elementos */
 }
 
 
@@ -74,6 +72,6 @@ footer {
   }
 
   .footerDevelopers{
-    margin-top: 15px;
+    margin-top: 15px;/* Cambiar el margen superior a 15px en pantallas más pequeñas */
   }
 }

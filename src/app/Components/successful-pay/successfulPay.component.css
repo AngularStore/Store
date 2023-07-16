@@ -100,78 +100,78 @@
     .mainBoxPay {/* Contenedor principal */
       width: 60%;/* Ancho del componente */
       height: 50%;/* Altura del componente */
-      margin-left: 20%;
-      border: 5px 5px 5px 5px;
+      margin-left: 20%;/* Margen izquierdo */
+      border: 5px 5px 5px 5px;/* Borde del componente */
     }
   
     .logoPay {
-      font-size: 1.2rem;
-      height: 40px;
-      margin: 10px 0px 30px 0px;
+      font-size: 1.2rem;/* Tamaño del logo */
+      height: 40px;/* Altura del logo */
+      margin: 10px 0px 30px 0px;/* Margen del logo */
     }
 
-    .logoPay p{
-        margin: 0px 0px 6px 0px;
+    .logoPay p{/* Texto del logo */
+        margin: 0px 0px 6px 0px;/* Margen del texto del logo */
     }
   
-    .textPay p {
-      font-size: 18px;
+    .textPay p {/* Texto de pago exitoso */
+      font-size: 18px;/* Tamaño del texto */
     }
   
-    .buttomPay {
-      width: 70%;
+    .buttomPay {/* Botón de pago exitoso */
+      width: 70%;/* Ancho del botón */
     }
   }
   
   /* Media queries para pantallas aún más pequeñas (móviles) */
-  @media screen and (max-width: 480px) {
-    .mainBoxPay {
-      width: 90%;
-      margin-left: 5%;
+  @media screen and (max-width: 480px) {/* Media queries para pantallas pequeñas */
+    .mainBoxPay {/* Contenedor principal */
+      width: 90%;/* Ancho del componente */
+      margin-left: 5%;/* Margen izquierdo */
     }
   
-    .logoPay {
-      font-size: 1rem;
-      height: 30px;
-      margin: 10px 0px 20px 0px;
+    .logoPay {/* Logo */
+      font-size: 1rem;/* Tamaño del logo */
+      height: 30px;/* Altura del logo */
+      margin: 10px 0px 20px 0px;/* Margen del logo */
     }
 
-    .logoPay p{
-        margin: 0px 0px 6px 0px;
+    .logoPay p{/* Texto del logo */
+        margin: 0px 0px 6px 0px;/* Margen del texto del logo */
     }
   
-    .textPay p {
-      font-size: 16px;
+    .textPay p {/* Texto de pago exitoso */
+      font-size: 16px;/* Tamaño del texto */
     }
   
-    .buttomPay {
-      width: 80%;
+    .buttomPay {/* Botón de pago exitoso */
+      width: 80%;/* Ancho del botón */
     }
   }
 
 
-  @media screen and (max-width: 655px) {
-    .mainBoxPay {
-      width: 90%;
-      margin-left: 5%;
+  @media screen and (max-width: 655px) {/* Media queries para pantallas pequeñas */
+    .mainBoxPay {/* Contenedor principal */
+      width: 90%;/* Ancho del componente */
+      margin-left: 5%;/* Margen izquierdo */
     }
   
-    .logoPay {
-      font-size: 1rem;
-      height: 30px;
-      margin: 10px 0px 20px 0px;
+    .logoPay {/* Logo */
+      font-size: 1rem;/* Tamaño del logo */
+      height: 30px;/* Altura del logo */
+      margin: 10px 0px 20px 0px;/* Margen del logo */
     }
 
-    .logoPay p{
-        margin: 0px 0px 6px 0px;
+    .logoPay p{/* Texto del logo */
+        margin: 0px 0px 6px 0px;/* Margen del texto del logo */
     }
   
-    .textPay p {
-      font-size: 16px;
+    .textPay p {/* Texto de pago exitoso */
+      font-size: 16px;/* Tamaño del texto */
     }
   
-    .buttomPay {
-      width: 80%;
+    .buttomPay {/* Botón de pago exitoso */
+      width: 80%;/* Ancho del botón */
     }
   }
 
