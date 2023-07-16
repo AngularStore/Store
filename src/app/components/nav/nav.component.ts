@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-  logo:string = '../../assets/nav/img/koaj.png';
+  logo:string = '../../../assets/nav/img/koaj.png';
 
   public showNavbar = false;
 
