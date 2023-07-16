@@ -8,20 +8,29 @@
     justify-content: center;
 }
 .descriptionHome .containDescription {
-    background-color: aqua;
     width: 448px;
-    height: 88px;
-    max-height: max-content;
-    font-size: 30px;
-    text-align: start;
-    /* text-align: left; */
-    font-family: Helvetica, Bold;
+    text-align: left;
+    font: normal normal bold 40px/48px Helvetica;
+    letter-spacing: 0px;
     color: #000000;
     text-transform: uppercase;
     opacity: 1;
-    
+    margin-bottom: 11px;
 }
-
+.descriptionHome button{
+    width: 203px;
+    height: 58px;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    color: white;
+    border-radius: 50px;
+    opacity: 1;
+    text-align: center;
+    font: normal normal bold 25px/30px Helvetica;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
 .imageHome img {
     width: 773px;
     height: 725px;
