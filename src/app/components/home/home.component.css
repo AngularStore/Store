@@ -1,46 +1,58 @@
-
 .containHome {
-    margin-top: 175px;
-    margin-left: 130px;
-    display:flex;
+    margin-left: 6.77%; /* Modifica el margen izquierdo del elemento */
+    width: 93.23%; /* Modifica el ancho del elemento */
+    display: flex; /* Convierte el contenedor en un contenedor flexible */
+    position: relative; /* Establece la posición relativa del elemento */
+    top: 100px; /* Modifica la posición vertical del elemento respecto al borde superior de la página */
 }
-.descriptionHome{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+.descriptionHome {
+    display: flex; /* Convierte el contenedor en un contenedor flexible */
+    flex-direction: column; /* Establece la dirección de los elementos como columna */
+    justify-content: center; /* Alinea los elementos verticalmente en el centro */
+    width: 27%; /* Modifica el ancho del elemento */
+    font: normal normal bold 1.5vw/1.4em Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
 }
+
 .descriptionHome .containDescription {
-    width: 448px;
-    text-align: left;
-    font: normal normal bold 40px/48px Helvetica;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-    margin-bottom: 11px;
+    width: 100%; /* Modifica el ancho del elemento */
+    text-align: left; /* Alinea el texto a la izquierda */
+    letter-spacing: 0px; /* Modifica el espaciado entre caracteres */
+    color: #000000; /* Modifica el color del texto */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    opacity: 1; /* Establece la opacidad del elemento */
+    margin-bottom: 11px; /* Modifica el margen inferior del elemento */
 }
-.descriptionHome button{
-    width: 203px;
-    height: 58px;
-    background: #000000 0% 0% no-repeat padding-box;
-    border: 1px solid #000000;
-    color: white;
-    border-radius: 50px;
-    opacity: 1;
-    text-align: center;
-    font: normal normal bold 25px/30px Helvetica;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-    cursor: pointer;
+
+.descriptionHome button {
+    width: 50%; /* Modifica el ancho del botón */
+    height: 6vh; /* Modifica la altura del botón */
+    background: #000000 0% 0% no-repeat padding-box; /* Modifica el fondo del botón */
+    border: 1px solid #000000; /* Modifica el borde del botón */
+    color: white; /* Modifica el color del texto del botón */
+    border-radius: 50px; /* Modifica el radio de borde del botón (forma redondeada) */
+    opacity: 1; /* Establece la opacidad del botón */
+    text-align: center; /* Alinea el texto al centro */
+    font: normal normal bold 1.2vw/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
+    letter-spacing: 0px; /* Modifica el espaciado entre caracteres */
+    color: #FFFFFF; /* Modifica el color del texto del botón */
+    opacity: 1; /* Establece la opacidad del botón */
+    cursor: pointer; /* Cambia el cursor del mouse al pasar por encima del botón */
 }
-.descriptionHome button:hover{
-    background: #1b1b1b 0% 0% no-repeat padding-box;
+
+.descriptionHome button:hover {
+    background: #1b1b1b 0% 0% no-repeat padding-box; /* Modifica el fondo del botón al pasar el cursor por encima */
 }
+
+.imageHome {
+    width: 40.26%; /* Modifica el ancho del elemento */
+    height: 67.12%; /* Modifica la altura del elemento */
+}
+
 .imageHome img {
-    width: 773px;
-    height: 725px;
-    margin-right: 57px;
+    width: 100%; /* Modifica el ancho de la imagen */
+    height: 100%; /* Modifica la altura de la imagen */
+    margin-right: 3%; /* Modifica el margen derecho de la imagen */
 }
 .decorationHome {
     display: flex;
