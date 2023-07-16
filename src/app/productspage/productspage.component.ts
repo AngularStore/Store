@@ -1,21 +1,21 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; // Importa la clase Component del módulo @angular/core
 
-@Component({
-  selector: 'app-productspage',
-  templateUrl: './productspage.component.html',
-  styleUrls: ['./productspage.component.css']
+@Component({ //decorador de componente
+  selector: 'app-productspage', // Selector del componente
+  templateUrl: './productspage.component.html', // Ruta de la plantilla HTML asociada al componente
+  styleUrls: ['./productspage.component.css'] // Ruta de la hoja de estilos CSS asociada al componente
 })
-export class ProductspageComponent {
-  shirts = [
-    { name: 'Shirt 1', description: 'Description 1', Price: 100 , image: '../../assets/images/shirt1.jpg'},
-    { name: 'Shirt 2', description: 'Description 2', Price: 200 , image: '../../assets/images/shirt1.jpg'},
-    { name: 'Shirt 3', description: 'Description 3', Price: 300 , image: '../../assets/images/shirt1.jpg' },
-    { name: 'Shirt 4', description: 'Description 4', Price: 400 , image: '../../assets/images/shirt1.jpg' },
-    { name: 'Shirt 5', description: 'Description 5', Price: 500 , image: '../../assets/images/shirt1.jpg' },
-    { name: 'Shirt 6', description: 'Description 6', Price: 600 , image: '../../assets/images/shirt1.jpg' },
-    { name: 'Shirt 7', description: 'Description 7', Price: 700 , image: '../../assets/images/shirt1.jpg' },
-    { name: 'Shirt 8', description: 'Description 8', Price: 800 , image: '../../assets/images/shirt1.jpg' },
-    { name: 'Shirt 9', description: 'Description 9', Price: 900 , image: '../../assets/images/shirt1.jpg' },
-    { name: 'Shirt 10', description: 'Description 10', Price: 1000 , image: '../../assets/images/shirt1.jpg' },
+export class ProductspageComponent { // Clase del componente
+  shirts = [ // Arreglo de objetos que representa las camisetas
+    { name: 'Shirt 2', description: 'Description 2', price: 200 , image: '../../assets/shirt1.jpg'}, //name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 1', description: 'Description 1', price: 100 , image: '../../assets/shirt1.jpg'},//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 3', description: 'Description 3', price: 300 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 4', description: 'Description 4', price: 400 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 5', description: 'Description 5', price: 500 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 6', description: 'Description 6', price: 600 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 7', description: 'Description 7', price: 700 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 8', description: 'Description 8', price: 800 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 9', description: 'Description 9', price: 900 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
+    { name: 'Shirt 10', description: 'Description 10', price: 101 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
   ];
 }
