@@ -1,0 +1,120 @@
+.loginContainer {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleLoginContainer {
+    text-align: center;
+    margin: 37px 0 40px 0;
+    font-family: Helvetica, sans-serif;
+    font: bold;
+    font-weight: bold;
+}
+
+.titleLoginContainer h1 {
+    width: 100%;
+}
+
+.principalContainerLogin {
+    display: block;
+    background-color: white;
+    width: 47%;
+    height: 69%;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #C4C4C4;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+.buttonRegisterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 115px;
+}
+
+.principalContainerLoginForm form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.usernameLoginContainer,
+.passwordLoginContainer {
+    font-family: Helvetica, sans-serif;
+    font: bold;
+    font-weight: bold;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin  : 10px 20px;
+}
+
+.usernameLoginContainer input{
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.passwordLoginContainer input{
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+
+.buttonLoginContainer,
+.buttonRegisterContainer {
+    font-family: Helvetica, sans-serif;
+    font: bold;
+    font-weight: bold;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin  : 10px 20px;
+}
+
+.buttonLoginContainer button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttonRegisterContainer button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buttonLogin:hover{
+    background-color: #131313;
+}
+#buttonRegister:hover {
+    background-color: #131313;
+}
+
+#usernameLogin,
+#passwordLogin {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #707070;
+    background: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 23px;
+    opacity: 1;
+}
+
+#buttonLogin,
+#buttonRegister{
+    color: white;
+    width: 100%;
+    height: 40px;
+    background: #000000;
+    border-radius: 10px;
+}
+
