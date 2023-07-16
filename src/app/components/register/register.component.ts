@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../auth.service';
+import { UserService } from './user.service';
+import { User } from './user.model'; 
 
 @Component({
   selector: 'app-register',
@@ -7,37 +8,28 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  username: string = '';
-  password: string = '';
-  fullname: string = '';
-  email: string = '';
-  phone: string = '';
-  address: string = '';
-
-  constructor(private authService: AuthService) {}
-
-  register(): void {
-  const user = {
-    username: this.username,
-    password: this.password,
-    fullname: this.fullname,
-    email: this.email,
-    phone: this.phone,
-    address: this.address
+  user: User = {
+    username: '',
+    password: '',
+    fullName: '',
+    email: '',
+    phone: '',
+    address: ''
   };
 
-  this.authService.createUser(user).subscribe(
-    response => {
-      console.log('Usuario creado exitosamente', response);
-      // Aquí puedes redirigir al usuario a otra página o realizar cualquier acción adicional después de crear el usuario
-    },
-    error => {
-      console.error('Error al crear el usuario', error);
-      // Aquí puedes manejar el error y mostrar un mensaje al usuario
-    }
-  );
-}
+  constructor(private userService: UserService) { }
 
-  
-
+  register() {
+    this.userService.registerUser(this.user)
+      .subscribe(
+        response => {
+          console.log('Usuario registrado exitosamente');
+          // Puedes realizar alguna acción adicional después del registro exitoso, como redirigir a otra página.
+        },
+        error => {
+          console.error('Error al registrar el usuario:', error);
+          // Maneja el error de acuerdo a tus necesidades.
+        }
+      );
+  }
 }
