@@ -7,15 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
-    CarouselComponent
+    RegisterComponent
   ],
   imports: [
     FormsModule,
