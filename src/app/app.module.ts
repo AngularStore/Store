@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,
+    HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
