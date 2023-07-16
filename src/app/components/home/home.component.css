@@ -11,7 +11,7 @@
     flex-direction: column; /* Establece la dirección de los elementos como columna */
     justify-content: center; /* Alinea los elementos verticalmente en el centro */
     width: 27%; /* Modifica el ancho del elemento */
-    font: normal normal bold 24px/40px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
+    font: normal normal bold 1.5vw/1.4em Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
 }
 
 .descriptionHome .containDescription {
@@ -55,92 +55,106 @@
     margin-right: 3%; /* Modifica el margen derecho de la imagen */
 }
 .decorationHome {
-    display: inline-flex;
-    flex-direction: column;
-    position: relative;
-    left: 10%;
-    top: 5%;
-    padding: 0%;
+  display: inline-flex; /* Modifica el tipo de visualización del elemento */
+  flex-direction: column; /* Modifica la dirección del flex container */
+  position: relative; /* Modifica la posición del elemento */
+  left: 10%; /* Modifica la posición horizontal del elemento */
+  top: 5%; /* Modifica la posición vertical del elemento */
+  padding: 0%; /* Modifica el relleno interno del elemento */
+}
+
+.triangleOne {
+  position: relative; /* Modifica la posición del elemento */
+  width: 0; /* Modifica el ancho del elemento */
+  height: 0; /* Modifica la altura del elemento */
+  border-right: 158px solid transparent; /* Modifica el borde derecho */
+  border-bottom: 33vh solid hwb(0 46% 52%); /* Modifica el borde inferior */
+  margin-left: 55%; /* Modifica el margen izquierdo del elemento */
+  transform: rotate(180deg); /* Modifica la rotación del elemento */
+}
+
+.triangleTwo {
+  position: absolute; /* Modifica la posición del elemento */
+  width: 0; /* Modifica el ancho del elemento */
+  height: 0; /* Modifica la altura del elemento */
+  border-right: 123px solid transparent; /* Modifica el borde derecho */
+  border-bottom: 34vh solid #474545; /* Modifica el borde inferior */
+  margin-left: 78%; /* Modifica el margen izquierdo del elemento */
+  transform: rotate(180deg); /* Modifica la rotación del elemento */
+}
+
+.triangleThree {
+  position: absolute; /* Modifica la posición del elemento */
+  width: 0; /* Modifica el ancho del elemento */
+  height: 0; /* Modifica la altura del elemento */
+  border-right: 85px solid transparent; /* Modifica el borde derecho */
+  border-bottom: 33vh solid #000000; /* Modifica el borde inferior */
+  margin-left: 102%; /* Modifica el margen izquierdo del elemento */
+  transform: rotate(180deg); /* Modifica la rotación del elemento */
+}
+
+@media (max-width: 776px) {
+  .containHome {
+      display: block; /* Modifica el tipo de visualización del elemento */
+      align-items: center; /* Modifica la alineación de los elementos secundarios en el eje transversal */
   }
-  
-  .triangleOne {
-    position: relative;
-    width: 0;
-    height: 0;
-    border-right: 158px solid transparent;
-    border-bottom: 33vh solid hwb(0 46% 52%);
-    margin-left: 55%;
-    transform: rotate(180deg);
-  }
-  
-  .triangleTwo {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-right: 123px solid transparent;
-    border-bottom: 34vh solid #474545;
-    margin-left: 78%;
-    transform: rotate(180deg);
-  }
-  
+
+  .decorationHome,
+  .triangleOne,
+  .triangleTwo,
   .triangleThree {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-right: 85px solid transparent;
-    border-bottom: 33vh solid #000000;
-    margin-left: 102%;
-    transform: rotate(180deg);
+      display: none; /* Modifica la visualización de los elementos */
   }
-  @media (max-width: 776px) {
-    .containHome{
-      display: block;
-      align-items: center;
-      }
-    .decorationHome, .triangleOne, .triangleTwo, .triangleThree{
-        display: none;
-    }
-    .imageHome {
+
+  .imageHome {
       width: 600px; /* Modifica el ancho del elemento */
       height: 540px; /* Modifica la altura del elemento */
-    }
-    .descriptionHome {
+  }
+
+  .descriptionHome {
       width: 400px; /* Modifica el ancho del elemento */
       font: normal normal bold 30px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
-    }
-    .descriptionHome .containDescription {
-      text-align: left;
-    }
-    .descriptionHome button {
+  }
+
+  .descriptionHome .containDescription {
+      text-align: left; /* Modifica la alineación del texto dentro del contenedor */
+  }
+
+  .descriptionHome button {
       width: 120px; /* Modifica el ancho del botón */
       height: 6vh; /* Modifica la altura del botón */
       font: normal normal bold 15px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
-    }
   }
-  @media (max-width: 650px){
-    .imageHome {
+}
+
+@media (max-width: 650px) {
+  .imageHome {
       width: 500px; /* Modifica el ancho del elemento */
       height: 440px; /* Modifica la altura del elemento */
-    }
   }
-  @media (max-width: 540px){
-    .imageHome {
+}
+
+@media (max-width: 540px) {
+  .imageHome {
       width: 450px; /* Modifica el ancho del elemento */
       height: 390px; /* Modifica la altura del elemento */
-    }
   }
-  @media (max-width: 480px){
-    .imageHome {
+}
+
+@media (max-width: 480px) {
+  .imageHome {
       width: 400px; /* Modifica el ancho del elemento */
       height: 340px; /* Modifica la altura del elemento */
-    }
-    .descriptionHome {
+  }
+
+  .descriptionHome {
       width: 300px; /* Modifica el ancho del elemento */
       font: normal normal bold 20px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
-    }
-    .descriptionHome button {
+  }
+
+  .descriptionHome button {
       width: 80px; /* Modifica el ancho del botón */
       height: 40px; /* Modifica la altura del botón */
       font: normal normal bold 10px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
-    }
   }
+}
