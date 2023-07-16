@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core'; // Importa los módulos Component y OnInit desde @angular/core
 import { HttpClient } from '@angular/common/http'; // Importa el módulo HttpClient desde @angular/common/http
 
+
 interface Shirt { // Define una interfaz llamada Shirt
   name: string; // Propiedad name de tipo string
   price: number; // Propiedad price de tipo number
   image: string; // Propiedad image de tipo string
 }
+
+ // Reemplaza con la URL real de la API
 
 @Component({ // Define el componente ProductspageComponent
   selector: 'app-productspage', // Selector del componente
@@ -13,24 +16,28 @@ interface Shirt { // Define una interfaz llamada Shirt
   styleUrls: ['./productspage.component.css'] // Estilos del componente
 })
 export class ProductspageComponent implements OnInit { // Clase del componente que implementa OnInit
-  shirts: Shirt[] = []; // Propiedad shirts que es una matriz de objetos Shirt
+  shirts: any; // Propiedad shirts que es una matriz de objetos Shirt
 
   constructor(private http: HttpClient) {} // Constructor del componente con una dependencia HttpClient
 
-  ngOnInit() { // Método ngOnInit que se ejecuta cuando el componente se inicia
-    this.getDataFromAPI(); // Llama al método getDataFromAPI para obtener datos de la API
+  ngOnInit() {                                                    // Función que se ejecuta al iniciar el componente
+    this.fetchProduct();                                          // Llama a la función para obtener los datos del producto
   }
 
-  getDataFromAPI() { // Método para obtener datos de la API
-    const url = 'https://koajstoreapi.onrender.com/api/products'; // Reemplaza con la URL real de la API
-
-    this.http.get<Shirt[]>(url).subscribe( // Realiza una solicitud GET a la API y suscribe a la respuesta
-      (data) => { // Función de callback para la respuesta exitosa
-        this.shirts = data; // Asigna los datos recibidos a la propiedad shirts
-      },
-      (error) => { // Función de callback para el manejo de errores
-        console.error('Error al obtener los datos:', error); // Muestra un mensaje de error en la consola
-      }
-    );
+  fetchProduct() {
+    const url = 'https://koajstoreapi.onrender.com/api/products';                                // Función para obtener los datos del producto
+    this.http.get(url).subscribe((response: any) => {  // Hace una petición GET a la API
+      console.log(response);                                      // Imprime la respuesta de la API
+      this.shirts = response;
+      console.log(this.shirts)                              // Asigna la respuesta de la API a la variable 'product'
+    });
   }
+  //imprime el json que obtengo al imprimir la api
+  // fetchProduct() {
+  //   const url = 'https://koajstoreapi.onrender.com/api/products';
+  //   this.http.get(url).subscribe((response: any) => {
+  //     console.log(response);
+  //   });
+  // }
+
 }
