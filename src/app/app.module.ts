@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'; // Agrega esta línea
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductPageComponent } from './components/product-page/product-page.component';
-
-
+import { HomeComponent } from './components/home/home.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductPageComponent,
+    HomeComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule // Agrega esta línea
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
