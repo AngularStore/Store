@@ -23,7 +23,9 @@
     opacity: 1; /* Establece la opacidad del elemento */
     margin-bottom: 11px; /* Modifica el margen inferior del elemento */
 }
-
+.descriptionHome a {
+  pointer-events: none;
+}
 .descriptionHome button {
     width: 50%; /* Modifica el ancho del botón */
     height: 6vh; /* Modifica la altura del botón */
@@ -37,6 +39,7 @@
     letter-spacing: 0px; /* Modifica el espaciado entre caracteres */
     color: #FFFFFF; /* Modifica el color del texto del botón */
     opacity: 1; /* Establece la opacidad del botón */
+    pointer-events: all;
     cursor: pointer; /* Cambia el cursor del mouse al pasar por encima del botón */
 }
 
