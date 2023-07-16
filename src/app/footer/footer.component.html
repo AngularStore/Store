@@ -1,15 +1,16 @@
 <footer>
-    <div class="footerContainer">//footerContainer is a class in footer.component.css
-        <div class="footerLegal">//footerLegal is a class in footer.component.css
-            <p>© {{ currentYear }} KOAJ, Inc. All Rights Reserved</p>//currentYear is a variable in footer.component.ts
+    <div class="footerContainer"><!--footerContainer es una clase en footer.component.css-->
+        <div class="footerLegal"><!--footerLegal es una clase in footer.component.css-->
+            <p>© {{ currentYear }} KOAJ, Inc. All Rights Reserved</p><!--currentYear es una vvariable enfooter.component.ts-->
         </div>
     
-        <div class="footerDevelopers">//footerDevelopers is a class in footer.component.css
-            <p>Developers:</p>//Developers: is a string
-            <ul>//unordered list
-                <li *ngFor="let developer of developers">//developer is a variable in footer.component.ts
-                    <a [href]="developer.github" target="_blank" rel="noopener noreferrer">//developer.github is a variable in footer.component.ts
-                         {{ developer.name }}//developer.name is a variable in footer.component.ts
+        <div class="footerDevelopers"><!--footerDevelopers es una clase en footer.component.css-->
+            <p>Developers:</p>
+            <ul><!--Lista desordenada-->
+                <li *ngFor="let developer of developers"><!--developer es una variable in footer.component.ts-->
+                     
+                    <a [href]="developer.github" target="_blank" rel="noopener noreferrer"><!--developer.github es una variable en footer.component.ts-->
+                         {{ developer.name }}<!--developer.name es una variable en footer.component.ts-->
                      </a>
                 </li>
             </ul>
