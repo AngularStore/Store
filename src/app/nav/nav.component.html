@@ -1,13 +1,18 @@
 <header>
-  <nav>
-    <ul>
-      <li class="align-left"><a href="#"><img [src]="logo"></a></li>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">Logout</a></li>
-      <li><a href="#">Inventario</a></li>
-    </ul>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-logo" href="/"><img [src]="logo"></a>
+    </div>
+    <div class="navbar-links">
+      <button class="menu-button" (click)="toggleNavbar()">☰</button>
+      <ul [ngClass]="{ 'show': showNavbar }">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Logout</a></li>
+        <li><a href="#">Inventario</a></li>
+      </ul>
+    </div>
   </nav>
 </header>

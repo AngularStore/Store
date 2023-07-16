@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
   logo:string = '../../assets/nav/img/koaj.png';
+
+  public showNavbar = false;
+
+  public toggleNavbar(): void {
+    this.showNavbar = !this.showNavbar;
+  }
+
 }
