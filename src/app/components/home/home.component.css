@@ -1,0 +1,29 @@
+.containHome {
+    margin-top: 175px;
+    display:flex;
+}
+.descriptionHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.descriptionHome .containDescription {
+    background-color: aqua;
+    width: 448px;
+    height: 88px;
+    max-height: max-content;
+    font-size: 30px;
+    text-align: start;
+    /* text-align: left; */
+    font-family: Helvetica, Bold;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    
+}
+
+.imageHome img {
+    width: 773px;
+    height: 725px;
+    margin-right: 57px;
+}
