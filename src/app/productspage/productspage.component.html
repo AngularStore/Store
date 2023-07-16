@@ -3,7 +3,7 @@
 <div class="productGrid">
   <div *ngFor="let shirt of shirts">
     <div class="productCard">
-      <img [src]="shirt.image" alt="Shirt Image" class="productImage"/>
+      <img [src]="shirt.imageURL" alt="Shirt Image" class="productImage" />
       <h2 class="productTitle" >{{ shirt.name }}</h2>
       <!-- <p class="productDescription">{{ shirt.description }}</p> -->
       <p class="productPrice">${{ shirt.price }}</p>

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http'; // Importa el módulo HttpCli
 interface Shirt { // Define una interfaz llamada Shirt
   name: string; // Propiedad name de tipo string
   price: number; // Propiedad price de tipo number
-  image: string; // Propiedad image de tipo string
+  imageURL: string; // Propiedad image de tipo string
 }
 
 @Component({ // Define el componente ProductspageComponent
