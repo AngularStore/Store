@@ -1,0 +1,25 @@
+<div class="container" *ngIf="product">                             <!-- Si existe el producto -->
+    <div class="row">                                               <!-- Muestra el producto -->
+      <div class="col-md-12">                                       <!-- Muestra el producto -->
+        <div class="card mb-4">                                     <!-- Muestra el producto -->
+
+            <div class="imagenes">
+                <img class="card-img-top" [src]="selectedImage || product.mainImage" alt="Card image cap"> <!-- Mostrar la imagen seleccionada o la imagen principal -->
+                <div class="littleImages">                          <!-- Muestra las imagenes pequeñas -->     
+                  <img *ngFor="let image of product.images" [src]="image" alt="" (click)="selectImage(image)" [class.selected]="image === selectedImage">
+                </div>
+            </div>
+          
+            <div class="card-body">                                 <!-- Muestra el cuerpo del producto -->
+                <h2 class="card-title">{{ product.name }}</h2>      <!-- Muestra el nombre del producto -->
+                <p class="card-text">{{ product.description }}</p>  <!-- Muestra la descripción del producto -->
+                <div class="below">                                 <!-- Muestra el precio y el botón de añadir al carrito -->
+                    <p class="card-price">${{ product.price }}</p>  <!-- Muestra el precio del producto -->
+                    <a href="#" class="btn btn-primary">Add to cart</a> <!-- Botón de añadir al carrito -->
+                </div>    
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
