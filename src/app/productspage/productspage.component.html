@@ -1,12 +1,12 @@
 
 <h1 class="products-title">List of Shirts</h1>
-<ul class="product-grid">
-  <li *ngFor="let shirt of shirts">
+<div class="product-grid">
+  <div *ngFor="let shirt of shirts">
     <div class="product-card">
         <img [src]="shirt.image" alt="Shirt Image" />
         <h2 class="product-title" >{{ shirt.name }}</h2>
         <p class="product-description">{{ shirt.description }}</p>
         <p class="product-price">Price: {{ shirt.Price }}</p>
     </div>
-  </li>
-</ul>
+  </div>
+</div>
