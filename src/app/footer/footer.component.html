@@ -1,25 +1,19 @@
-<footer class="footer">
-    <div class="container">
-      <p>© [{{currentYear }}] KOAJ. inc. Todos los derechos reservados.</p>
+<footer>
+    <div class="footerContainer">//footerContainer is a class in footer.component.css
+        <div class="footerLegal">//
+            <p>© {{ currentYear }} KOAJ, Inc. All Rights Reserved</p>
+        </div>
+    
+        <div class="footerDevelopers">
+            <p>Developers:</p>
+            <ul>
+                <li *ngFor="let developer of developers">
+                    <a [href]="developer.github" target="_blank" rel="noopener noreferrer">
+                         {{ developer.name }}
+                     </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="container">
-        <p>Desarrolladores:</p>
-        <ul>
-            <li>Nombre: Git Hub:</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-  </footer>
-  
+</footer>
+
