@@ -1,21 +1,56 @@
-import { Component } from '@angular/core'; // Importa la clase Component del módulo @angular/core
+//aqui importamos los modulos necesarios
+import { Component } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { map, catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
-@Component({ //decorador de componente
-  selector: 'app-productspage', // Selector del componente
-  templateUrl: './productspage.component.html', // Ruta de la plantilla HTML asociada al componente
-  styleUrls: ['./productspage.component.css'] // Ruta de la hoja de estilos CSS asociada al componente
+//aqui declaramos el componente
+@Component({
+  selector: 'app-productspage', //aqui declaramos el selector
+  templateUrl: './productspage.component.html', //aqui declaramos la ruta del archivo html
+  styleUrls: ['./productspage.component.css'] //aqui declaramos la ruta del archivo css
 })
-export class ProductspageComponent { // Clase del componente
-  shirts = [ // Arreglo de objetos que representa las camisetas
-    { name: 'Shirt 2', description: 'Description 2', price: 200 , image: '../../assets/shirt1.jpg'}, //name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 1', description: 'Description 1', price: 100 , image: '../../assets/shirt1.jpg'},//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 3', description: 'Description 3', price: 300 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 4', description: 'Description 4', price: 400 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 5', description: 'Description 5', price: 500 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 6', description: 'Description 6', price: 600 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 7', description: 'Description 7', price: 700 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 8', description: 'Description 8', price: 800 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 9', description: 'Description 9', price: 900 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-    { name: 'Shirt 10', description: 'Description 10', price: 101 , image: '../../assets/shirt1.jpg' },//name representa el nombre del item, description la descripcion del item, price el precio e image la ruta de la imagen
-  ];
+
+//aqui declaramos la clase
+export class ProductspageComponent {
+  shirts = []; //aqui declaramos la variable que va a contener los datos de la api
+
+  constructor(private http: HttpClient) { } //aqui inyectamos el servicio http
+
+  ngOnInit() { //aqui declaramos el metodo que se ejecuta al iniciar el componente
+    this.getDataFromAPI();//aqui llamamos a la funcion que obtiene los datos de la api
+  }
+
+  getDataFromAPI() {//aqui declaramos la funcion que obtiene los datos de la api
+    const url = 'api'; //aqui ponemos la url de la api
+
+    //aqui hacemos la peticion get a la api, con pipe() podemos encadenar operadores
+    this.http.get<any[]>(url).pipe(
+      // Agrega el operador map para transformar los datos recibidos
+      map((response) => {
+        // Realiza cualquier transformación necesaria a los datos recibidos y devuelve el resultado
+        return response.map((item) => {
+          // Por ejemplo, puedes transformar los datos de cada elemento recibido
+          return {
+            name: item.name.toUpperCase(),
+            price: item.price,
+            image: item.image
+          };
+        });
+      }),//aqui hacemos la peticion get a la api, con pipe() podemos encadenar operadores
+      catchError((error: HttpErrorResponse) => {
+        // Manejo de errores
+        console.error('Error:', error);
+        return throwError('Se produjo un error al obtener los datos.');
+      })
+    ).subscribe(
+      (data) => {
+        this.shirts = data;
+      },
+      (error) => {
+        // Manejo de errores si la solicitud falla
+        console.error('Error:', error);
+      }
+    );
+  }
 }
