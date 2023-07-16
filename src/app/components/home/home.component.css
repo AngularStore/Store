@@ -1,3 +1,4 @@
+
 .containHome {
     margin-top: 175px;
     margin-left: 130px;
@@ -41,3 +42,42 @@
     height: 725px;
     margin-right: 57px;
 }
+.decorationHome {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 10%;
+    top: 5%;
+    padding: 0;
+  }
+  
+  .triangleOne {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-right: 249px solid transparent;
+    border-bottom: 33vh solid hwb(0 46% 52%);
+    margin-left: 10%;
+    transform: rotate(180deg);
+  }
+  
+  .triangleTwo {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 152px solid transparent;
+    border-bottom: 35vh solid #474545;
+    margin-left: 49%;
+    transform: rotate(180deg);
+  }
+  
+  .triangleThree {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 103px solid transparent;
+    border-bottom: 33vh solid #000000;
+    margin-left: 69%;
+    transform: rotate(180deg);
+  }
+  
