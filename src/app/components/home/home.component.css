@@ -55,21 +55,21 @@
     margin-right: 3%; /* Modifica el margen derecho de la imagen */
 }
 .decorationHome {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     position: relative;
     left: 10%;
     top: 5%;
-    padding: 0;
+    padding: 0%;
   }
   
   .triangleOne {
     position: relative;
     width: 0;
     height: 0;
-    border-right: 249px solid transparent;
+    border-right: 158px solid transparent;
     border-bottom: 33vh solid hwb(0 46% 52%);
-    margin-left: 10%;
+    margin-left: 55%;
     transform: rotate(180deg);
   }
   
@@ -77,9 +77,9 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-right: 152px solid transparent;
-    border-bottom: 35vh solid #474545;
-    margin-left: 49%;
+    border-right: 123px solid transparent;
+    border-bottom: 34vh solid #474545;
+    margin-left: 78%;
     transform: rotate(180deg);
   }
   
@@ -87,9 +87,22 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-right: 103px solid transparent;
+    border-right: 85px solid transparent;
     border-bottom: 33vh solid #000000;
-    margin-left: 69%;
+    margin-left: 102%;
     transform: rotate(180deg);
+  }
+  @media (max-width: 776px) {
+    .decorationHome, .triangleOne, .triangleTwo, .triangleThree{
+        display: none;
+    }
+  }
+  @media (max-width: 768px){
+    .containHome{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        
+    }
   }
   
