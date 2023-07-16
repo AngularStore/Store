@@ -11,7 +11,7 @@
     flex-direction: column; /* Establece la dirección de los elementos como columna */
     justify-content: center; /* Alinea los elementos verticalmente en el centro */
     width: 27%; /* Modifica el ancho del elemento */
-    font: normal normal bold 1.5vw/1.4em Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
+    font: normal normal bold 24px/40px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
 }
 
 .descriptionHome .containDescription {
@@ -93,16 +93,54 @@
     transform: rotate(180deg);
   }
   @media (max-width: 776px) {
+    .containHome{
+      display: block;
+      align-items: center;
+      }
     .decorationHome, .triangleOne, .triangleTwo, .triangleThree{
         display: none;
     }
-  }
-  @media (max-width: 768px){
-    .containHome{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        
+    .imageHome {
+      width: 600px; /* Modifica el ancho del elemento */
+      height: 540px; /* Modifica la altura del elemento */
+    }
+    .descriptionHome {
+      width: 400px; /* Modifica el ancho del elemento */
+      font: normal normal bold 30px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
+    }
+    .descriptionHome .containDescription {
+      text-align: left;
+    }
+    .descriptionHome button {
+      width: 120px; /* Modifica el ancho del botón */
+      height: 6vh; /* Modifica la altura del botón */
+      font: normal normal bold 15px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
     }
   }
-  
+  @media (max-width: 650px){
+    .imageHome {
+      width: 500px; /* Modifica el ancho del elemento */
+      height: 440px; /* Modifica la altura del elemento */
+    }
+  }
+  @media (max-width: 540px){
+    .imageHome {
+      width: 450px; /* Modifica el ancho del elemento */
+      height: 390px; /* Modifica la altura del elemento */
+    }
+  }
+  @media (max-width: 480px){
+    .imageHome {
+      width: 400px; /* Modifica el ancho del elemento */
+      height: 340px; /* Modifica la altura del elemento */
+    }
+    .descriptionHome {
+      width: 300px; /* Modifica el ancho del elemento */
+      font: normal normal bold 20px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
+    }
+    .descriptionHome button {
+      width: 80px; /* Modifica el ancho del botón */
+      height: 40px; /* Modifica la altura del botón */
+      font: normal normal bold 10px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
+    }
+  }
