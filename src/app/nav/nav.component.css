@@ -1,0 +1,44 @@
+/* Estilos de la barra de navegación */
+header {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Añadido */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 30px;
+}
+
+nav ul li a:hover {
+  background-color: #666;
+}
+
+.align-left {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto; /* Añadido */
+}
+
+.align-left img {
+  margin-right: 10px; /* Añadido (ajusta el espaciado entre el logo y otros elementos) */
+}
+
+
+
