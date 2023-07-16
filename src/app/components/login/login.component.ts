@@ -8,11 +8,13 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  username: string = ''; // Variable para almacenar el nombre de usuario ingresado en el formulario
-  password: string = ''; // Variable para almacenar la contraseña ingresada en el formulario
-   constructor(private authService: AuthService) {} // Inyección de dependencia del servicio AuthService
-   login(): void {
-    this.authService.login(this.username, this.password) // Llamada al método de inicio de sesión del servicio AuthService
+  username: string = '';
+  password: string = '';
+
+  constructor(private authService: AuthService) {}
+
+  login(): void {
+    this.authService.login(this.username, this.password)
       .subscribe(
         response => {
           // Aquí puedes manejar la respuesta de la API después de verificar el acceso
