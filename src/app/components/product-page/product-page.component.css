@@ -2,17 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.col-md-12 {
-    height: 700px;
+    caret-color: transparent; /* Ocultar el cursor titilante */
 }
 
 .selected {
     border: 2px solid blue;
 }
 
-.card.mb-4 {
+/*------------------CONTENEDOR PRINCIPAL------------------*/
+
+.principalContainer {
     margin: 0 auto;
     width: 90%;
     display: flex;
@@ -23,8 +22,10 @@
     opacity: 1;
 }
 
-.imagenes {
-    margin: auto;
+/*------------------IMAGENES------------------*/
+
+.images{
+    
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -32,11 +33,16 @@
     justify-content: center;
 }
 
-.imagenes img {
+/*------------------IMAGENES PRINCIPAL------------------*/
+
+.images img {
+    margin: 10px;
     border-radius: 11px;
     width: 80%;
     height: 80%;
 }
+
+/*------------------IMAGENES PEQUEÑAS------------------*/
 
 .littleImages {
     display: flex;
@@ -49,7 +55,16 @@
     border-radius: 10px;
 }
 
-h2 {
+/*------------------BODY DE DESCRIPCION ------------------*/
+
+.description{
+    width: 100%;
+}
+
+/*------------------TITULO------------------*/
+
+.title {
+    width: 90%;
     padding: 0;
     margin: 0;
     font-family: Helvetica;
@@ -57,26 +72,31 @@ h2 {
     color: #000000;
 }
 
-.card-body {
-    width: 100%;
-}
+/*------------------DESCRIPCION-----------------*/
 
-.card-text {
+.descriptionText {
+    font-size: 20px;
     font-family: Helvetica;
     width: 90%;
-    height: 224px;
+    height: 90%;
     background-color: #DDDDDD;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 11px;
     opacity: 1;
+    padding: 10px; /* Agregar margen al texto */
 }
+
+
+/*------------------BOTON Y PRECIO------------------*/
 
 .below {
     display: flex;
     margin-top: 20px;
 }
 
-.card-price {
+/*------------------PRECIO------------------*/
+
+.price {
     width: 70%;
     color: #5D5D5D;
     font-size: 60px;
@@ -84,15 +104,15 @@ h2 {
     font-weight: bold;
 }
 
-.btn {
+/*------------------BOTON ADD TO CART------------------*/
+
+
+.btn-primary {
     height: 72px;
     width: 30%;
     float: right;
     border-radius: 36px;
     margin-right: 10%;
-}
-
-.btn-primary {
     background-color: #000000;
     color: #FFFFFF;
     font-size: 30px;
@@ -104,7 +124,8 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Responsive */
+/*------------------MEDIA QUERIES------------------*/
+
 @media (max-width: 1100px) {
     .btn-primary {
         font-size: 20px;
@@ -118,17 +139,14 @@ h2 {
         height: 50px;
     }
 
-    .card-title,
-    .card-price {
+    .title,
+    .price {
         font-size: 30px;
     }
 
-    .btn {
+    .btn-primary {
         height: 35px;
         width: 40%;
-    }
-
-    .btn-primary {
         font-size: 18px;
         line-height: 35px;
     }
@@ -147,12 +165,12 @@ h2 {
 }
 
 @media (max-width: 488px) {
-    .imagenes {
+    .images {
         margin: 0;
         width: 100%;
     }
 
-    .imagenes img {
+    .images img {
         width: 80%;
         height: 80%;
     }
@@ -163,29 +181,26 @@ h2 {
         height: 50px;
     }
 
-    .card-title,
-    .card-price {
+    .title,
+    .price {
         font-size: 30px;
     }
 
-    .btn {
+    .btn-primary {
         height: 35px;
         width: 40%;
-    }
-
-    .btn-primary {
         font-size: 13px;
         line-height: 16px;
     }
 }
 
 @media (max-width: 346px) {
-    .imagenes {
+    .images {
         display: flex;
         flex-direction: column;
     }
 
-    .imagenes img {
+    .images img {
         width: 80%;
         height: 80%;
     }
@@ -201,36 +216,33 @@ h2 {
         flex-direction: column;
     }
 
-    .card-title {
+    .title {
         font-size: 14px;
         text-align: left;
     }
 
-    .card-text {
+    .descriptionText {
         font-family: Helvetica;
         font-size: 10px;
         width: 90%;
         height: 224px;
     }
 
-    .card-price {
+    .price {
         font-size: 15px;
     }
 
-    .btn {
+    .btn-primary {
         height: 35px;
         width: 50%;
         border-radius: 12px;
-    }
-
-    .btn-primary {
         font-size: 10px;
         justify-content: center;
         text-align: center;
         line-height: 17px;
     }
 
-    .card.mb-4 {
+    .principalContainer {
         border-radius: 15px;
     }
 }

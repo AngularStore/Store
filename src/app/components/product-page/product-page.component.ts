@@ -20,14 +20,14 @@ export class ProductPageComponent implements OnInit {
     // Simulación de la llamada a la API y la respuesta del producto
     return new Observable(observer => {                           // Crea un nuevo Observable
       const product = {                                           // Crea un objeto con los datos del producto
-        name: 'Producto de ejemplo Koaj',                         // Nombre del producto             
-        description: 'Que le vaya bien ingeniero',                // Descripción del producto     
-        price: 300,                                               // Precio del producto               
-        mainImage: 'https://cdn.koaj.co/162992-thickbox_default/pantalon-super-slim-chino-en-drill.jpg',  // Imagen principal del producto
+        name: 'Camiseta polo tela jersey estampada con cuello tejido.',                         // Nombre del producto             
+        description: 'Camiseta polo para hombre, con estampado miniprint, puños en rectilineo y cuello camisero, pechera incluida con tres botones para cierre, cogotera y marquilla tejida, cuenta con una confeccion en tela jersey. Esta prenda tiene un diseño versátil que complementará tus looks en todas tus salidas con amigos.',                // Descripción del producto     
+        price: 59900,                                               // Precio del producto               
+        mainImage: 'https://cdn.koaj.co/167554-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg',  // Imagen principal del producto
         images: [                                                 // Imágenes del producto             
-          'https://cdn.koaj.co/162993-thickbox_default/pantalon-super-slim-chino-en-drill.jpg',
-          'https://cdn.koaj.co/162994-thickbox_default/pantalon-super-slim-chino-en-drill.jpg',
-          'https://cdn.koaj.co/162995-thickbox_default/pantalon-super-slim-chino-en-drill.jpg'
+          'https://cdn.koaj.co/167555-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg',
+          'https://cdn.koaj.co/167556-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg',
+          'https://cdn.koaj.co/167557-thickbox_default/camiseta-polo-tela-jersey-estampada-con-cuello-tejido.jpg'
         ]
       };
 
