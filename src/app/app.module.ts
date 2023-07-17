@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CartComponent } from './components/cart/cart.component';
 import { NavComponent } from './components/nav/nav.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { MaterialModule } from './material-import/material.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

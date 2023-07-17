@@ -4,6 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
+  imports: [
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
+  ],
   exports: [
     MatInputModule,
     MatButtonModule,
