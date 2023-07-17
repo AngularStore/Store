@@ -12,6 +12,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductspageComponent } from './components/productspage/productspage.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
+import { CreateProductComponent } from './components/create-product/create-product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProductspageComponent } from './components/productspage/productspage.co
     LoginComponent,
     RegisterComponent,
     AboutComponent,
-    ProductspageComponent
+    ProductspageComponent,
+    ProductPageComponent,
+    CreateProductComponent
   ],
   imports: [
     FormsModule,
