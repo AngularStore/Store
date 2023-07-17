@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';                // Importa dependencias de Angular         
+import { Component, OnInit } from '@angular/core';                // Importa dependencias de Angular
 import { HttpClient } from '@angular/common/http';                // Importa la clase HttpClient
 
-@Component({                                                      // Decorador Component                     
-  selector: 'app-product-page',                                   // Selector del componente para ser usado en el HTML       
+@Component({                                                      // Decorador Component
+  selector: 'app-product-page',                                   // Selector del componente para ser usado en el HTML
   templateUrl: './product-page.component.html',                   // Ruta del archivo HTML
   styleUrls: ['./product-page.component.css']                     // Ruta del archivo CSS
 })
@@ -11,13 +11,13 @@ export class ProductPageComponent implements OnInit {             // Exporta la 
   product: any;                                                   // Variable para almacenar los datos del producto obtenidos de la API de Koaj
   selectedImage: string = '';                                     // Inicializa selectedImage con un valor predeterminado vacío
 
-  constructor(private http: HttpClient) {}                        // Inicializa la clase HttpClient para hacer peticiones HTTP           
+  constructor(private http: HttpClient) {}                        // Inicializa la clase HttpClient para hacer peticiones HTTP
 
   ngOnInit() {                                                    // Función que se ejecuta al iniciar el componente
     this.fetchProduct();                                          // Llama a la función para obtener los datos del producto
   }
 
-  fetchProduct() {                                                // Función para obtener los datos del producto                    
+  fetchProduct() {                                                // Función para obtener los datos del producto
     const productId = '1';                                        // ID del producto a obtener
 
     this.http.get(`https://koajstoreapi.onrender.com/api/products/${productId}`).subscribe((response: any) => {  // Hace una petición GET a la API

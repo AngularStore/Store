@@ -1,0 +1,39 @@
+<div class="MainContent">
+  <form action="">
+
+    <mat-form-field>
+      <mat-label>Nombre producto</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+  </form>
+</div>
+<form (ngSubmit)="updateProduct()" #productForm="ngForm">
+  <div>
+    <mat-form-field>
+    <mat-label>Quantity:</mat-label>
+    <input matInput type="number" name="quantity" [(ngModel)]="product.quantity" required>
+    </mat-form-field>
+  </div>
+  <div>
+    <label>Stock Min:</label>
+    <input type="number" name="stockMin" [(ngModel)]="product.stockMin" required>
+  </div>
+  <div>
+    <label>Stock Max:</label>
+    <input type="number" name="stockMax" [(ngModel)]="product.stockMax" required>
+  </div>
+  <div>
+    <label for="productName">Product Name:</label>
+    <input type="text" name="productName" [(ngModel)]="product.product.productName" required>
+  </div>
+  <div>
+    <label>Description:</label>
+    <textarea name="description" [(ngModel)]="product.product.description" required></textarea>
+  </div>
+  <div>
+    <label>Price:</label>
+    <input type="number" name="price" [(ngModel)]="product.product.price" required>
+  </div>
+  <button mat-raised-button color="primary" type="submit" [disabled]="productForm.invalid">Update</button>
+</form>

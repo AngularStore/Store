@@ -14,18 +14,19 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<any> {
-    const url = `${BASE_URL}/api/products`;
+    const url = `${BASE_URL}/api/inventory`;
     return this.http.get(url);
   }
 
-  updateProduct(productId: number, updatedProduct: any): Observable<any> {
-    const url = `${BASE_URL}/api/products/${productId}`;
+  getProduct(productID:number): Observable<any> {
+    const url = `${BASE_URL}/api/inventory/product/${productID}`;
+    return this.http.get(url);
+  }
+
+  updateProduct(productID: number, updatedProduct: any): Observable<any> {
+    const url = `${BASE_URL}/api/inventory/product/${productID}`;
     return this.http.put(url, updatedProduct);
   }
 
-  addProduct(newProduct: any): Observable<any> {
-    const url = `${BASE_URL}/api/products`;
-    return this.http.post(url, newProduct);
-  }
 
 }

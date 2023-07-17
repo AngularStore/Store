@@ -12,7 +12,6 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductspageComponent } from './productspage/productspage.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -22,11 +21,12 @@ import { InventoryComponent } from './components/inventory/inventory.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ItemComponent } from './components/item/item.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
-
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -36,9 +36,8 @@ import { MatOptionModule } from '@angular/material/core';
     RegisterComponent,
     AboutComponent,
     ProductspageComponent,
-    DashboardComponent,
     InventoryComponent,
-    ItemComponent
+    ProductFormComponent,
   ],
   imports: [
     FormsModule,
@@ -55,7 +54,9 @@ import { MatOptionModule } from '@angular/material/core';
     MatSortModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatOptionModule
+    MatOptionModule,
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [AuthService,
     HttpClient],
