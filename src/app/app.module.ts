@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
-import { ProductspageComponent } from './productspage/productspage.component';
+import { ProductspageComponent } from './components/productspage/productspage.component';
 
 @NgModule({
   declarations: [
