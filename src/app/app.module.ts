@@ -8,12 +8,19 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClient } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { NavComponent } from './components/nav/nav.component';
+import { AboutComponent } from './components/about/about.component';
+
 
 @NgModule({
   declarations: [
+    HomeComponent,
+    NavComponent,
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent
   ],
   imports: [
     FormsModule,
