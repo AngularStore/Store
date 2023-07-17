@@ -12,21 +12,6 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductspageComponent } from './productspage/productspage.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { InventoryComponent } from './components/inventory/inventory.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import {ReactiveFormsModule} from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatOptionModule } from '@angular/material/core';
-import { ProductFormComponent } from './components/product-form/product-form.component';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -37,8 +22,11 @@ import {MatInputModule} from '@angular/material/input';
     RegisterComponent,
     AboutComponent,
     ProductspageComponent,
-    InventoryComponent,
-    ProductFormComponent,
+    ProductPageComponent,
+    CreateProductComponent,
+    FooterComponent,
+    NotFoundComponent,
+    SuccessfulPayComponent
   ],
   imports: [
     FormsModule,

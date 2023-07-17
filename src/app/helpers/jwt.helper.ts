@@ -3,7 +3,7 @@
  * token - The JWT token to be parsed.
  * return The payload of the JWT token as a JSON object.
  */
-const parseJwt = (token: string) => {
+export const parseJwt = (token: string) => {
     // Extract the base64Url part of the token
     const base64Url = token.split('.')[1];
     // Replace characters that are not valid in base64Url with characters that are valid in base64
@@ -16,5 +16,4 @@ const parseJwt = (token: string) => {
     // Parse the JSON string and return the resulting object
     return JSON.parse(jsonPayload);
 };
-  
-export default parseJwt;
+

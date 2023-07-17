@@ -115,4 +115,7 @@
     background: #000000; /* Establece el fondo en negro (#000000) para los botones de inicio de sesión y registro */
     border-radius: 10px; /* Agrega un borde redondeado de 10px a los botones de inicio de sesión y registro */
 }
-
+.buttonRegisterContainer a{
+    text-decoration: none;
+    color: white;
+}
