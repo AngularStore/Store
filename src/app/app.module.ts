@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CartComponent } from './components/cart/cart.component';
 import { NavComponent } from './components/nav/nav.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavComponent
-    CartComponent
+    CartComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
