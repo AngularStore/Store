@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ImageSliderModule } from './imageSlider/ImageSliderModule';
 
 @NgModule({
   declarations: [
@@ -12,12 +15,15 @@ import { AboutComponent } from './components/about/about.component';
     HomeComponent,
     NavComponent,
     AppComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    CommonModule,
+    HttpClientModule,
+    ImageSliderModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
