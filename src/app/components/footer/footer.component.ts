@@ -14,7 +14,6 @@ const developers: Developer[] = [//Se crea un arreglo de tipo Developer
   {name:"Santiago Jaramillo Duque", github:"https://github.com/santiagoaramillo"},
   {name:"Adrián Fernando Gaitán Londoño", github:"https://github.com/adriancho91s"},
   {name:"Juan Manuel Morales Santacruz", github:"https://github.com/jmorales284"},
-  {name:"Santiago Guevara Méndez", github:"https://github.com/DjSantech"},
   {name:"Daniel Toro soto", github:"https://github.com/pausa11"},
   {name:"Jefferson David Arteaga Bedoya", github:"https://github.com/JeffersonArteaga"},
   {name:"Juan Diego Rincon Franco", github:"https://github.com/Di3go0-0"},
