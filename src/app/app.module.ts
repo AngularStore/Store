@@ -14,6 +14,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductspageComponent } from './components/productspage/productspage.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NotFoundComponent } from './components/notFound/notFound.component';
+import { SuccessfulPayComponent } from './components/successful-pay/successfulPay.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { CreateProductComponent } from './components/create-product/create-produ
     AboutComponent,
     ProductspageComponent,
     ProductPageComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    FooterComponent,
+    NotFoundComponent,
+    SuccessfulPayComponent
   ],
   imports: [
     FormsModule,
