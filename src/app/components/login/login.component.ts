@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../auth.service';
+import { parseJwt } from '../../helpers/jwt.helper';
+import { LocalStorageService } from 'src/app/local-storage.service';
 
 //Sse utiliza para decorar una clase y definir un componente. Proporciona metadatos que describen cómo se debe comportar y presentar el componente.
 @Component({
@@ -11,14 +13,15 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private localStorageService: LocalStorageService) { }
 
   login(): void {
     this.authService.login(this.username, this.password)
       .subscribe(
         response => {
           // Aquí puedes manejar la respuesta de la API después de verificar el acceso
-          console.log(response);
+          let tokenDsencripted = parseJwt(response.token);
+          this.localStorageService.setItem('token', tokenDsencripted)
         },
         error => {
           // Aquí puedes manejar el error de la API en caso de autenticación fallida
@@ -27,3 +30,4 @@ export class LoginComponent {
       );
   }
 }
+
