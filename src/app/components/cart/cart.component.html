@@ -3,10 +3,10 @@
         <h1>tu carrito de compras</h1>
     </div>
     <div class="cartItems">
-        <!-- <app-cart-item [product]="prod" *ngFor="let prod of products"></app-cart-item> -->
+        <app-cart-item [product]="prod" *ngFor="let prod of products"></app-cart-item>
     </div>
     
-    <div class="checkout">
+    <div class="checkout" *ngIf="totalAmount > 0">
         <p> total: ${{totalAmount}}</p>
         <button><a href="#">Continue Shopping</a></button>
         <button> Checkout </button>

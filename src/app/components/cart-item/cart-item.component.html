@@ -1,1 +1,14 @@
-<p>cart-item works!</p>
+<div class="cartItem">
+    <img src={{product.img}} />
+    <div class="description">
+        <p> 
+            <b> {{product.name}}</b>
+        </p>
+        <p> {{product.price}} </p>
+        <div class="countHandler">
+            <button> - </button>
+            <input value=1 />
+            <button> + </button>
+        </div>
+    </div>
+</div>

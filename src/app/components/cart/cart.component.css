@@ -1,11 +1,12 @@
 /* Estilos que se aplican al carrito de compras */
 .cart {
     position: absolute; /* Define la posición absoluta */
-    top: 50%; /* Posiciona el elemento en el 50% de la parte superior */
+    margin-top: 10px;
+    top: 130px; /* Posiciona el elemento en el 50% de la parte superior */
     left: 50%; /* Posiciona el elemento en el 50% de la parte izquierda */
-    transform: translate(-50%, -50%); /* Centra el elemento en base a su propio tamaño */
+    transform: translate(-50%, 0%); /* Centra el elemento en base a su propio tamaño */
     width: 600px; /* Define el ancho del elemento */
-    max-height: 600px; /* Define la altura máxima del elemento */
+    max-height: 400px; /* Define la altura máxima del elemento */
     background-color: #000000; /* Define el color de fondo como transparente */
     color: white;
     border: 2px solid #252828; /* Define el borde del elemento */
@@ -15,14 +16,12 @@
     flex-direction: column; /* Define la dirección de los elementos hijos en columna */
     justify-content: flex-start; /* Alinea los elementos hijos al principio del eje principal */
     align-items: center; /* Alinea los elementos hijos al centro en el eje transversal */
-    padding: 20px; /* Define el espacio interno del elemento */
+    padding: 10px; /* Define el espacio interno del elemento */
     overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede la altura */
   }
   
   /* Estilos que se aplican al título del carrito de compras */
   .cart h1 {
-    font-size: 24px; /* Define el tamaño de fuente del título */
-    font-weight: bold; /* Define el grosor de fuente del título */
     text-align: center; /* Centra el texto del título */
     margin-bottom: 10px; /* Define el margen inferior del título */
     white-space: nowrap; /* Evita que el título se divida en varias líneas */

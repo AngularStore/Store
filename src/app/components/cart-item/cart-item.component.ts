@@ -6,5 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cart-item.component.css']
 })
 export class CartItemComponent {
-  @Input() product!: {}
+  @Input() product: {
+    img: string,
+    name: string,
+    price: number
+  } = {
+    img: '',
+    name: '',
+    price: 1
+  }
 }
