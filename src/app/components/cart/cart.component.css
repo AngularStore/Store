@@ -6,11 +6,11 @@
     transform: translate(-50%, -50%); /* Centra el elemento en base a su propio tamaño */
     width: 600px; /* Define el ancho del elemento */
     max-height: 600px; /* Define la altura máxima del elemento */
-    background-color: #2928289f; /* Define el color de fondo como transparente */
+    background-color: #000000; /* Define el color de fondo como transparente */
     color: white;
-    border: 1px solid #000000; /* Define el borde del elemento */
+    border: 2px solid #252828; /* Define el borde del elemento */
     border-radius: 10px; /* Define el radio de los bordes del elemento */
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra al elemento */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra al elemento */
     display: flex; /* Aplica el modelo de caja flexible */
     flex-direction: column; /* Define la dirección de los elementos hijos en columna */
     justify-content: flex-start; /* Alinea los elementos hijos al principio del eje principal */
@@ -31,6 +31,7 @@
     max-width: 100%; /* Define el ancho máximo del título */
     padding: 0 20px; /* Define el espacio interno izquierdo y derecho del título */
     box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto del título */
+    font: normal bold 40px/48px Helvetica;
   }
   .cart .cartItems {
     display: flex; /* Aplica el modelo de caja flexible */
@@ -46,6 +47,7 @@
   
   /* Estilos que se aplican a los párrafos en la sección de pago del carrito de compras */
   .cart .checkout p {
+    font: normal bold 20px/48px Helvetica;;
     margin-bottom: 5px; /* Define el margen inferior de los párrafos en la sección de pago */
   }
   
@@ -53,8 +55,8 @@
   .cart .checkout button {
     text-decoration: none;
     margin-right: 10px; /* Define el margen derecho de los botones en la sección de pago */
-    background-color: #1d377e; /* Define el color de fondo de los botones en la sección de pago */
-    color: #fff; /* Define el color de texto de los botones en la sección de pago */
+    background-color: #ffffff; /* Define el color de fondo de los botones en la sección de pago */
+    color: #000000; /* Define el color de texto de los botones en la sección de pago */
     border: none; /* Quita el borde de los botones en la sección de pago */
     border-radius: 4px; /* Define el radio de los bordes de los botones en la sección de pago */
     padding: 5px 10px; /* Define el espacio interno de los botones en la sección de pago */
@@ -70,6 +72,6 @@
   }
   .cart .checkout button a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
