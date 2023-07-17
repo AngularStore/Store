@@ -21,7 +21,7 @@ export class LoginComponent {
         response => {
           // Aquí puedes manejar la respuesta de la API después de verificar el acceso
           let tokenDsencripted = parseJwt(response.token);
-          this.localStorageService.setItem('token', tokenDsencripted)
+          this.localStorageService.setItem('token', tokenDsencripted)   
         },
         error => {
           // Aquí puedes manejar el error de la API en caso de autenticación fallida

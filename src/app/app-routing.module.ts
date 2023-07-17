@@ -6,9 +6,11 @@ import { LoginComponent } from './components/login/login.component';
 import { ProductspageComponent} from './components/productspage/productspage.component';
 import { RegisterComponent} from './components/register/register.component';
 import { SuccessfulPayComponent} from './components/successful-pay/successfulPay.component';
+import { TokenGuard } from './guard/auth.guard';
+import { TokenGuardAdmin } from './guard/admin.guard';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: HomeComponent,},
   {path: 'about', component: AboutComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
