@@ -1,36 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent {
-  Items() {
-    let ar = []
-    for(let i=0;i < 10;i++){
-      let obj :{
-        img: string,
-        name: string,
-        price: number
-      } = {
-        img: 'https://cdn.koaj.co/84381-thickbox_default/camisa-estampada-manga-larga.jpg',
-        name: `product- ${i + 1} `,
-        price: 25000
-      }
-      ar.push(obj)
-    }
-    return ar
+export class CartComponent implements OnInit {
+  cartItems: any[] = [];
+  totalAmount: number = 0;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.getItems();
   }
-  products = this.Items()
-  Total() {
-    let t:number = 0
-    for(let i=0;i < this.products.length;i++){
-      t += this.products[i].price
-    }
-    return t
+
+  getItems() {
+    const apiUrl = 'https://koajstoreapi.onrender.com/api/cart/user/1';
+
+    this.http.get(apiUrl).subscribe((response: any) => {
+      this.cartItems = response;
+      this.totalAmount = this.getTotalAmount();
+      console.log(response);
+    });
   }
-  totalAmount: number = this.Total()
-  
-  
+
+  getTotalAmount(): number {
+    let total = 0;
+
+    for (let i = 0; i < this.cartItems.length; i++) {
+      total += this.cartItems[i].price;
+    }
+
+    return total;
+  }
 }
