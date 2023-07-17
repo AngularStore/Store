@@ -1,0 +1,61 @@
+<h1>Inventory Dashboard</h1>
+<p>Edit inventory</p>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.productID }}</td>
+      <td>{{ product.productName }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Editing inventory</p>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Quantity</th>
+      <th>Stock Min</th>
+      <th>Stock Max</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="editingInventory">
+      <td>{{ editingInventory.productID }}</td>
+      <td>
+        <mat-form-field>
+          <input matInput type="number" [(ngModel)]="editingInventory.quantity" />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput type="number" [(ngModel)]="editingInventory.stockMin" />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput type="number" [(ngModel)]="editingInventory.stockMax" />
+        </mat-form-field>
+      </td>
+      <td>
+        <button mat-raised-button color="primary" (click)="handleUpdateInventory(editingInventory.productID)">Update</button>
+      </td>
+    </tr>
+    <tr *ngFor="let inventoryItem of inventory" [ngClass]="{ 'highlighted': editingInventory === inventoryItem }">
+      <td>{{ inventoryItem.productID }}</td>
+      <td>{{ inventoryItem.quantity }}</td>
+      <td>{{ inventoryItem.stockMin }}</td>
+      <td>{{ inventoryItem.stockMax }}</td>
+      <td>
+        <button mat-raised-button color="primary" (click)="setEditingInventory(inventoryItem)">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

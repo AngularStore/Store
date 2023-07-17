@@ -12,6 +12,20 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductspageComponent } from './productspage/productspage.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { InventoryComponent } from './components/inventory/inventory.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ItemComponent } from './components/item/item.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -21,13 +35,27 @@ import { ProductspageComponent } from './productspage/productspage.component';
     LoginComponent,
     RegisterComponent,
     AboutComponent,
-    ProductspageComponent
+    ProductspageComponent,
+    DashboardComponent,
+    InventoryComponent,
+    ItemComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatOptionModule
   ],
   providers: [AuthService,
     HttpClient],
