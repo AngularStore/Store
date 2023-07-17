@@ -4,7 +4,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ActivatedRoute } from '@angular/router';
-import { Product, Product2 } from '../product-form/interface';
+import { Product } from './interface';
 
 
 @Component({
@@ -16,25 +16,12 @@ import { Product, Product2 } from '../product-form/interface';
 
 export class ProductFormComponent implements OnInit {
 
-  // I import the interface Product from the file interface.ts
-  // help to use the interface to save the petition data
-  //
- product: Product = {
-    inventoryID: 1,
-    productID: 1,
-    quantity: 10,
-    stockMin: 0,
-    stockMax: 200,
-    product: {
-      productID: 1,
-      productName: "Camiseta polo",
-      description: "Camiseta polo para hombre, con estampado miniprint, puños en rectilineo y cuello camisero, pechera incluida con tres botones para cierre, cogotera y marquilla tejida, cuenta con una confeccion en tela jersey.",
-      price: 25
-    }
-  };
+  //use product interface to initialize product, but don't use values
+  // to make that form is empty
+product: any = {}
 
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, ) { }
 
   ngOnInit(): void {
 // Do a petiton with getProduct(productID:number) to get the product to update
@@ -53,6 +40,21 @@ this.productService.getProduct(1).subscribe(
     const productID = this.product.productID;
     this.productService.updateProduct(1, this.product).subscribe(
       (data: any) => {
+        console.log(data);
+        console.log('Product updated successfully');
+        this.updateProductName(); // Llamar al método updateProductName después de actualizar el producto
+      },
+      (error: any) => {
+        console.error(error);
+      }
+    );
+  }
+
+  updateProductName(): void {
+    const productID = this.product.productID;
+    this.productService.updateProductName(1, this.product.product).subscribe(
+      (data: any) => {
+        console.log(this.product.product);
         console.log('Product updated successfully');
       },
       (error: any) => {
@@ -60,4 +62,5 @@ this.productService.getProduct(1).subscribe(
       }
     );
   }
+
 }

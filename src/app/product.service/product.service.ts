@@ -28,5 +28,10 @@ export class ProductService {
     return this.http.put(url, updatedProduct);
   }
 
+  updateProductName(productID: number, updatedProductName: any): Observable<any> {
+    const url = `${BASE_URL}/api/products/${productID}`;
+    return this.http.put(url, updatedProductName);
+  }
+
 
 }
