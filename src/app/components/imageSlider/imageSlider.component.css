@@ -29,9 +29,14 @@
 }
 
 .slider {
-  position: relative;
-  height: 100%;
+  position: fixed;
+  height: 20%;
+  width: 20%;
+  top: 20px;
+   /* Asegura que esté por encima de otros elementos */
 }
+
+
 
 .dotsContainer {
   display: flex;

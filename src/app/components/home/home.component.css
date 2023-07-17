@@ -161,3 +161,8 @@
       font: normal normal bold 10px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
   }
 }
+.carousel{
+  position: fixed;
+  width: 100px;
+  top: 100px;
+}

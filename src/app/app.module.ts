@@ -7,7 +7,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ImageSliderModule } from './imageSlider/ImageSliderModule';
+import { ImageSliderComponent } from './components/imageSlider/imageSlider.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +16,14 @@ import { ImageSliderModule } from './imageSlider/ImageSliderModule';
     NavComponent,
     AppComponent,
     AboutComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     HttpClientModule,
-    ImageSliderModule
+
 ],
   providers: [],
   bootstrap: [AppComponent]
