@@ -30,7 +30,9 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatOptionModule} from '@angular/material/core';
 import { MatSelectModule} from '@angular/material/select';
 import { MatInputModule} from '@angular/material/input';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { InventoryTableComponent } from './components/dashboard/inventory-table/inventory-table.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { ProductFormComponent } from './components/product-form/product-form.com
     FooterComponent,
     NotFoundComponent,
     SuccessfulPayComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    DashboardComponent,
+    InventoryTableComponent
   ],
   imports: [
     FormsModule,

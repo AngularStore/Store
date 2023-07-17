@@ -7,7 +7,7 @@ import { ProductspageComponent} from './components/productspage/productspage.com
 import { RegisterComponent} from './components/register/register.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { SuccessfulPayComponent} from './components/successful-pay/successfulPay.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
