@@ -11,7 +11,7 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
     CartComponent,
     CartItemComponent
   ],
