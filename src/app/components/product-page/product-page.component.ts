@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { LocalStorageService } from 'src/app/local-storage.service';
 
 @Component({
   selector: 'app-product-page',

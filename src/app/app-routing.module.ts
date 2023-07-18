@@ -8,6 +8,8 @@ import { RegisterComponent} from './components/register/register.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { SuccessfulPayComponent} from './components/successful-pay/successfulPay.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +19,9 @@ const routes: Routes = [
   {path: 'products', component: ProductspageComponent},
   {path: 'products/:id', component:  ProductPageComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'successfulPay', component: SuccessfulPayComponent},
+  {path: 'product-form', component: ProductFormComponent},
+  {path: 'cart', component: CartComponent},
 ];
 
 @NgModule({
