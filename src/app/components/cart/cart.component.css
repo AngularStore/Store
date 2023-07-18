@@ -20,6 +20,7 @@
     align-items: center; /* Alinea los elementos hijos al centro en el eje transversal */
     padding: 10px; /* Define el espacio interno del elemento */
     overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede la altura */
+    margin-bottom: 40vh; /* Margen inferior de 15px */
   }
   
   /* Estilos que se aplican al título del carrito de compras */

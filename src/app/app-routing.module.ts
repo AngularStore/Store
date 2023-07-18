@@ -17,6 +17,7 @@ import { CombinedTokenGuard } from './guard/combinedLogin.guard';
 
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { NotFoundComponent } from './components/notFound/notFound.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,6 +35,9 @@ const routes: Routes = [
   {path: 'successfulPay', component: SuccessfulPayComponent},
   {path: 'product-form', component: ProductFormComponent},
   {path: 'cart', component: CartComponent},
+  {path: 'notFound', component: NotFoundComponent},
+  //Path made for the rest of pages that are not found
+  {path: '**', pathMatch: 'full', redirectTo: 'notFound'}
 ];
 
 @NgModule({
