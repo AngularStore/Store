@@ -20,14 +20,18 @@
 }
 
 .principalContainerLogin {
-    display: block; /* Establece el contenedor principal del formulario como un bloque */
-    background-color: white; /* Establece el color de fondo del contenedor principal */
-    width: 55%; /* Establece el ancho del contenedor principal */
-    height: 75%; /* Establece la altura del contenedor principal */
-    box-shadow: 0px 3px 6px #00000029; /* Agrega una sombra al contenedor principal */
-    border: 1px solid #C4C4C4; /* Agrega un borde al contenedor principal */
-    border-radius: 50px; /* Agrega bordes redondeados al contenedor principal */
-    opacity: 1; /* Establece la opacidad del contenedor principal */
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 55%;
+  height: 100%;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #C4C4C4;
+  border-radius: 50px;
+  opacity: 1;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
 }
 
 .buttonRegisterContainer {
@@ -111,12 +115,14 @@
 #buttonRegister,
 #buttonBack{
     color: white; /* Establece el color del texto en blanco para los botones de inicio de sesión y registro */
-    width: 100%; /* Establece el ancho al 100% para los botones de inicio de sesión y registro */
-    height: 40px; /* Establece la altura en 40px para los botones de inicio de sesión y registro */
+    width: 100%;
+    min-height: 30px;/* Establece el ancho al 100% para los botones de inicio de sesión y registro */
+    height: 160%; /* Establece la altura en 40px para los botones de inicio de sesión y registro */
     background: #000000; /* Establece el fondo en negro (#000000) para los botones de inicio de sesión y registro */
     border-radius: 10px; /* Agrega un borde redondeado de 10px a los botones de inicio de sesión y registro */
 }
 .buttonRegisterContainer a{
+    width: 60%;
     text-decoration: none;
     color: white;
 }
@@ -130,7 +136,7 @@
     }
     #buttonLogin, #buttonRegister{
         font-size: 12px;
-        
+
     }
     .principalContainerLogin{
         height: 450px;
@@ -139,4 +145,8 @@
     .buttonRegisterContainer, .buttonRegisterContainer, .buttonLoginContainer {
         width: 80%;
     }
+}
+
+.formularioInput{
+  width: 100%;
 }
