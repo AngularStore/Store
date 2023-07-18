@@ -1,0 +1,87 @@
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  right: 2%;
+  font-size: 30px;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  left: 2%;
+  font-size: 30px;
+}
+
+.slider {
+  width: 900px; /* Cambia este valor al ancho deseado */
+  height: 700px; /* Altura ajustable según tus necesidades */
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px; /* Ajusta esta posición según tu preferencia */
+  width: 100%;
+}
+
+.dot {
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .slider {
+    height: 300px; /* Ajusta la altura para pantallas pequeñas */
+  }
+
+  .rightArrow, .leftArrow {
+    font-size: 25px; /* Tamaño de flechas más pequeño para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    height: 200px; /* Ajusta la altura para pantallas aún más pequeñas */
+  }
+
+  .rightArrow, .leftArrow {
+    font-size: 16px; /* Tamaño de flechas más pequeño para pantallas aún más pequeñas */
+  }
+}
+
+/* Estilos para el contenedor del carrusel */
+.carrouselContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px; /* Ajusta este valor según tus necesidades */
+}

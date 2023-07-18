@@ -5,14 +5,15 @@ import { SlideInterface } from './types/slide.interface';
 // Definición del componente y sus metadatos.
 @Component({
   selector: 'image-slider',
-  templateUrl: './imageSlider.component.html',
-  styleUrls: ['./imageSlider.component.css'],
+  templateUrl: './carousel.component.html',
+  styleUrls: [ './carousel.component.css'],
 })
-export class ImageSliderComponent implements OnInit, OnDestroy {
+export class CarouselComponent implements OnInit, OnDestroy {
   // Propiedad para recibir los slides a mostrar, se utiliza el decorador @Input() para que sea accesible desde fuera del componente.
   @Input() slides: SlideInterface[] = [
-    { url: '/assets/img/image.jpg', title: 'beach' },
-    { url: '/assets/img/image2.jpg', title: 'boat' }
+    { url: '/assets/img/banner_camisetas.jpg', title: 'boat' },
+    { url: '/assets/img/essencials.jpg', title: 'jeans' },
+    { url: '/assets/img/foto_jeans.jpg', title: 'aja' }
   ];
   // Propiedad para almacenar el índice del slide actual.
   currentIndex: number = 0;
@@ -25,14 +26,12 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
   }
 
   // Método que se ejecuta al destruir el componente.
-  ngOnDestroy() {
-    // Limpia el timer al destruir el componente para evitar problemas de memoria.
+  ngOnDestroy() { // Limpia el timer al destruir el componente para evitar problemas de memoria.
     window.clearTimeout(this.timeoutId);
   }
 
   // Método para reiniciar el timer y avanzar a la siguiente imagen.
-  resetTimer() {
-    // Si existe un timer activo, lo limpia para evitar conflictos.
+  resetTimer() {// Si existe un timer activo, lo limpia para evitar conflictos.
     if (this.timeoutId) {
       window.clearTimeout(this.timeoutId);
     }
@@ -52,8 +51,7 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
   }
 
   // Método para avanzar al siguiente slide.
-  goToNext(): void {
-    // Comprueba si el slide actual es el último.
+  goToNext(): void { // Comprueba si el slide actual es el último.
     const isLastSlide = this.currentIndex === this.slides.length - 1;
     // Calcula el índice del siguiente slide teniendo en cuenta si el actual es el último.
     const newIndex = isLastSlide ? 0 : this.currentIndex + 1;

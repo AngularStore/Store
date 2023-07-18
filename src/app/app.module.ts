@@ -7,7 +7,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ImageSliderComponent } from './components/imageSlider/imageSlider.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { ImageSliderComponent } from './components/imageSlider/imageSlider.compo
     NavComponent,
     AppComponent,
     AboutComponent,
-    ImageSliderComponent
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
