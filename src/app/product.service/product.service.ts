@@ -18,7 +18,7 @@ export class ProductService {
     return this.http.get(url);
   }
 
-  getProduct(productID:number): Observable<any> {
+  getProduct(productID: number): Observable<any> {
     const url = `${BASE_URL}/api/inventory/product/${productID}`;
     return this.http.get(url);
   }
@@ -33,5 +33,14 @@ export class ProductService {
     return this.http.put(url, updatedProductName);
   }
 
+  getUser(userID: number): Observable<any> {
+    const url = `${BASE_URL}/api/users/${userID}`;
+    return this.http.get(url);
+  }
+
+  putUser(userID: number, updatedUser: any): Observable<any> {
+    const url = `${BASE_URL}/api/users/${userID}`;
+    return this.http.put(url, updatedUser);
+  }
 
 }

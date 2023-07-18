@@ -43,6 +43,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatTable} from '@angular/material/table';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -63,7 +66,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     LogoutComponent,
     DashboardComponent,
     InventoryTableComponent,
-    CarouselComponent
+    CarouselComponent,
+    AdminProfileComponent
   ],
   imports: [
     FormsModule,
@@ -85,7 +89,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MatInputModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatRadioModule
   ],
   providers: [AuthService,
     HttpClient],
