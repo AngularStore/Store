@@ -205,6 +205,15 @@
     /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
   }
 }
+@media (max-width: 720px) {
+  
+  .imageHome {
+    width: 636px;
+    /* Modifica el ancho del elemento */
+    height: 540px;
+    /* Modifica la altura del elemento */
+  }
+}
 
 @media (max-width: 650px) {
   .imageHome {
