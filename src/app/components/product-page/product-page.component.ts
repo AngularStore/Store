@@ -1,32 +1,99 @@
-import { Component, OnInit } from '@angular/core';                // Importa dependencias de Angular         
-import { HttpClient } from '@angular/common/http';                // Importa la clase HttpClient
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { LocalStorageService } from 'src/app/local-storage.service';
 
-@Component({                                                      // Decorador Component                     
-  selector: 'app-product-page',                                   // Selector del componente para ser usado en el HTML       
-  templateUrl: './product-page.component.html',                   // Ruta del archivo HTML
-  styleUrls: ['./product-page.component.css']                     // Ruta del archivo CSS
+@Component({
+  selector: 'app-product-page',
+  templateUrl: './product-page.component.html',
+  styleUrls: ['./product-page.component.css']
 })
 
-export class ProductPageComponent implements OnInit {             // Exporta la clase ProductPageComponent e implementa la interfaz OnInit para inicializar el componente al cargar la página
-  product: any;                                                   // Variable para almacenar los datos del producto obtenidos de la API de Koaj
-  selectedImage: string = '';                                     // Inicializa selectedImage con un valor predeterminado vacío
+export class ProductPageComponent implements OnInit {
+  product: any;
+  selectedImage: string = '';
+  quantity: number = 1;
+  ProductQuantity: any;
+  userID: any;
 
-  constructor(private http: HttpClient) {}                        // Inicializa la clase HttpClient para hacer peticiones HTTP           
+  constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
-  ngOnInit() {                                                    // Función que se ejecuta al iniciar el componente
-    this.fetchProduct();                                          // Llama a la función para obtener los datos del producto
-  }
-
-  fetchProduct() {                                                // Función para obtener los datos del producto                    
-    const productId = '1';                                        // ID del producto a obtener
-
-    this.http.get(`https://koajstoreapi.onrender.com/api/products/${productId}`).subscribe((response: any) => {  // Hace una petición GET a la API
-      this.product = response;                                    // Asigna la respuesta de la API a la variable 'product'
-      console.log(this.product);                                  // Imprime en consola los datos del producto
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      const productId = params['id'];
+      this.fetchProduct(productId);
+      this.fetchProductQuantity(productId);
     });
   }
 
-  selectImage(image: string) {                                    // Función para seleccionar una imagen del producto
-    this.selectedImage = image;                                   // Asigna la imagen seleccionada a la variable 'selectedImage'
+  fetchProduct(productId: string) {
+    this.http.get(`https://koajstoreapi.onrender.com/api/products/${productId}`).subscribe((response: any) => {
+      this.product = response;
+      console.log(this.product);
+    });
+  }
+
+  fetchProductQuantity(productId: string) {
+    this.http.get(`https://koajstoreapi.onrender.com/api/inventory/product/${productId}`).subscribe((productQuantity: any) => {
+      this.ProductQuantity = productQuantity.quantity;
+      console.log(this.ProductQuantity);
+    });
+  }
+
+  selectImage(image: string) {
+    this.selectedImage = image;
+  }
+
+  /*addToCart() {
+    const cartItem = {
+      productId: this.product.id,
+      quantity: 1
+    };
+
+    this.http.post('https://koajstoreapi.onrender.com/api/cart', cartItem)
+      .subscribe((response: any) => {
+        console.log('Item added to cart:', response);
+        // Aquí puedes agregar lógica adicional, como mostrar una notificación de éxito, actualizar el estado del carrito, etc.
+      });
+  }*/
+
+  addToCart() {
+    this.userID = localStorage.getItem('token');
+    let userIdObject = JSON.parse(this.userID);
+    const cartItem = {
+      //saca el user id del local storage
+      userID: userIdObject.user.userID,
+      productID: this.product.productID,
+      quantity: this.quantity,
+    };
+
+    this.http.get(`https://koajstoreapi.onrender.com/api/inventory/product/${this.product.productID}`)
+      .subscribe((inventoryResponse: any) => {
+        const availableQuantity = inventoryResponse.quantity;
+
+        if (this.quantity <= availableQuantity) {
+          console.log(userIdObject.user.userID);
+          this.http.post('https://koajstoreapi.onrender.com/api/cart', cartItem)
+            .subscribe((response: any) => {
+              console.log('Item added to cart:', response);
+              // Aquí puedes agregar lógica adicional, como mostrar una notificación de éxito, actualizar el estado del carrito, etc.
+            });
+        } else {
+          console.log('No hay suficiente stock disponible');
+          // Aquí puedes mostrar una notificación al usuario informando que no hay suficiente stock disponible
+        }
+      });
+  }
+
+  increaseQuantity() {
+    if (this.quantity < this.ProductQuantity){
+      this.quantity++;
+    } 
+  }
+
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 }
