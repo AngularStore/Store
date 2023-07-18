@@ -42,7 +42,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatTable} from '@angular/material/table';
-
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +62,8 @@ import {MatTable} from '@angular/material/table';
     WelcomeComponent,
     LogoutComponent,
     DashboardComponent,
-    InventoryTableComponent
+    InventoryTableComponent,
+    CarouselComponent
   ],
   imports: [
     FormsModule,

@@ -43,6 +43,7 @@ header {
   color: #707070;
   text-decoration: none;
   padding: 30px;
+
 }
 
 .navbar-links ul .welcome {
@@ -67,8 +68,19 @@ header {
   display: none;
 }
 
+@media (max-width: 1443px){
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'navFont', 'sans-serif';
+    font-size: 18px;
+  }
+}
+
 /* Estilos para dispositivos con un ancho máximo de 1276px */
-@media (max-width: 1276px) {
+@media (max-width: 1285px) {
   .navbar-links ul {
     display: none;
     position: absolute;
@@ -107,6 +119,17 @@ header {
 
   .navbar ul li a:hover {
     color: #f5c62b;
+  }
+
+  @media (max-width: 1334px){
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      font-family: 'navFont', 'sans-serif';
+      font-size: 11px;
+    }
   }
 
   /* Estilos para dispositivos con un ancho máximo de 280px */

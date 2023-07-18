@@ -10,7 +10,7 @@ export class TokenGuard implements CanActivate {
 
    canActivate(): boolean {
     const token = this.localStorageService.getItem('token')
-    if (token.role === 'client') {
+    if (token.user.role === 'client') {
       return true;
     } else {
       this.router.navigate(['/login']);
