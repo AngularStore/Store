@@ -13,6 +13,7 @@ import { TokenGuardAdmin } from './guard/admin.guard';
 import { WelcomeComponent} from './components/welcome/welcome.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
+import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
 import { CombinedTokenGuard } from './guard/combinedLogin.guard';
 
 import { CartComponent } from './components/cart/cart.component';
@@ -31,8 +32,9 @@ const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'dashboard', component: DashboardComponent,   canActivate: [TokenGuardAdmin]},
   { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]},
+  { path: 'adminprofile', component: AdminProfileComponent,  canActivate: [TokenGuardAdmin]},
   //{ path: 'paymentStatus/userId', canActivate: [TokenGuard,TokenGuardAdmin]}
-  {path: 'paymentStatus/:userId', component: SuccessfulPayComponent},
+  {path: 'paymentStatus/:userID', component: SuccessfulPayComponent},
   {path: 'product-form', component: ProductFormComponent},
   {path: 'cart', component: CartComponent},
   {path: 'notFound', component: NotFoundComponent},
