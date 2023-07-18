@@ -40,6 +40,7 @@ export class ProductFormComponent implements OnInit {
     const productID = this.product.productID;
     this.productService.updateProduct(productID, this.product).subscribe(
       (data: any) => {
+        console.log(this.product);
         console.log(data);
         console.log('Product updated successfully');
         this.updateProductName();
