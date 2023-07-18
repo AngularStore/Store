@@ -30,7 +30,7 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatOptionModule} from '@angular/material/core';
 import { MatSelectModule} from '@angular/material/select';
 import { MatInputModule} from '@angular/material/input';
-import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -40,6 +40,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import {MatTable} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -59,8 +62,7 @@ import { MatPaginator } from '@angular/material/paginator';
     WelcomeComponent,
     LogoutComponent,
     DashboardComponent,
-    InventoryTableComponent,
-    
+    InventoryTableComponent
   ],
   imports: [
     FormsModule,
@@ -82,7 +84,7 @@ import { MatPaginator } from '@angular/material/paginator';
     MatInputModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
+    MatToolbarModule
   ],
   providers: [AuthService,
     HttpClient],

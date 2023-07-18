@@ -12,18 +12,20 @@ import { TokenGuard } from './guard/auth.guard';
 import { TokenGuardAdmin } from './guard/admin.guard';
 import { WelcomeComponent} from './components/welcome/welcome.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'logout', component: LogoutComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'products', component: ProductspageComponent},
-  {path: 'products/:id', component:  ProductPageComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'welcome', component: WelcomeComponent},
-  {path: 'dashboard', component: DashboardComponent, canActivate: [TokenGuardAdmin]}
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'products', component: ProductspageComponent },
+  { path: 'products/:id', component: ProductPageComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'welcome', component: WelcomeComponent },
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]},
 ];
 
 @NgModule({

@@ -13,8 +13,9 @@
   justify-content: center; /* Centra los elementos verticalmente */
   background-color: black; /* Color de fondo del footer */
   padding: 2%; /* Espaciado interno del footer */
-  width: 100%; /* Ancho completo del footer */   
-  margin-left: 0px; 
+  width: 100%; /* Ancho completo del footer */
+  margin-left: 0px;
+  position: relative;
 }
 
 .footerDevelopers {
@@ -61,8 +62,9 @@ footer {
   background-color: black; /* Color de fondo del footer */
   width: 100%; /* Ancho completo del footer */
   display: flex; /* Utiliza el modelo de caja flexible */
-  position: absolute; /* Posiciona el footer de forma absoluta */
-  
+  position: relative;
+  top: 100%; /* Posiciona el footer de forma absoluta */
+
 }
 
 /* Estilos para hacer el footer responsive */

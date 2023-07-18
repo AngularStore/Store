@@ -1,3 +1,4 @@
+<app-nav></app-nav>
 <div class="MainContent">
   <mat-card class="example-card">
     <mat-toolbar>
@@ -22,10 +23,10 @@
             <mat-label>Quantity:</mat-label>
             <input matInput type="number" name="quantity" [(ngModel)]="product.quantity" required />
           </mat-form-field>
-          <button mat-mini-fab class="indicator" color="primary" (click)="product.quantity = product.quantity - 1">
+          <button mat-mini-fab class="indicator" color="primary" type="button" (click)="product.quantity = product.quantity - 1">
             <mat-icon>exposure_neg_1</mat-icon>
           </button>
-          <button mat-mini-fab class="indicator" color="primary" (click)="product.quantity = product.quantity + 1">
+          <button mat-mini-fab class="indicator" color="primary" type="button" (click)="product.quantity = product.quantity + 1">
             <mat-icon>exposure_plus_1</mat-icon>
           </button>
         </div>
@@ -34,10 +35,10 @@
             <mat-label>Stock Min:</mat-label>
             <input matInput type="number" name="stockMin" [(ngModel)]="product.stockMin" required />
           </mat-form-field>
-          <button mat-mini-fab class="indicator" color="accent" (click)="product.stockMin = product.stockMin - 1">
+          <button mat-mini-fab class="indicator" color="accent" type="button" (click)="product.stockMin = product.stockMin - 1">
             <mat-icon>exposure_neg_1</mat-icon>
           </button>
-          <button mat-mini-fab class="indicator" color="accent" (click)="product.stockMin = product.stockMin + 1">
+          <button mat-mini-fab class="indicator" color="accent" type="button" (click)="product.stockMin = product.stockMin + 1">
             <mat-icon>exposure_plus_1</mat-icon>
           </button>
         </div>
@@ -46,17 +47,17 @@
             <mat-label>Stock Max:</mat-label>
             <input matInput type="number" name="stockMax" [(ngModel)]="product.stockMax" required />
           </mat-form-field>
-          <button mat-mini-fab class="indicator" color="accent" (click)="product.stockMax = product.stockMax - 1">
+          <button mat-mini-fab class="indicator" color="accent" type="button" (click)="product.stockMax = product.stockMax - 1">
             <mat-icon>exposure_neg_1</mat-icon>
           </button>
-          <button mat-mini-fab class="indicator" color="accent" (click)="product.stockMax = product.stockMax + 1">
+          <button mat-mini-fab class="indicator" color="accent" type="button" (click)="product.stockMax = product.stockMax + 1">
             <mat-icon>exposure_plus_1</mat-icon>
           </button>
         </div>
       </mat-card-header>
       <mat-toolbar class="actionbuttons">
         <mat-card-actions>
-          <button class="primary" mat-raised-button color="primary" type="submit">
+          <button class="primary" mat-raised-button color="primary" type="button" (click)="goBack()">
             Back
           </button>
           <button class="primary" mat-raised-button color="primary" type="submit" [disabled]="productForm.invalid">

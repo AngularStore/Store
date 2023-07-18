@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
@@ -17,7 +18,8 @@ export class InventoryTableComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'price', 'quantity', 'stockMin', 'stockMax', 'edit'];
   showDescriptionColumn: boolean = false;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(
@@ -29,9 +31,9 @@ export class InventoryTableComponent implements OnInit {
       }
     );
   }
-  editProduct(row: any): void {
-    // Lógica para editar el producto
-    console.log('Edit product', row);
-  }
 
+  editProduct(row: any): void {
+    this.router.navigateByUrl(`dashboard/editar/${row.product.productID}`);
+    console.log('Edit product', row.product.productID);
+  }
 }
