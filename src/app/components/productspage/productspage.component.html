@@ -9,7 +9,7 @@
   <div *ngFor="let shirt of shirts">
 
     <!-- Contenedor de la tarjeta de producto con la clase "productCard" -->
-    <div class="productCard">
+    <a href={{rutes[shirt.productID]}}><div class="productCard">
 
       <!-- Imagen del producto con la URL enlazada a la propiedad "imageURL" del primer objeto "productImages" -->
       <img [src]="shirt.productImages[0].imageURL" alt="Shirt Image" class="productImage"/>
@@ -22,7 +22,7 @@
       <!-- Precio del producto con la propiedad "price" -->
       <p class="productPrice">${{ shirt.price }}</p>
 
-    </div> <!-- Fin del contenedor de la tarjeta de producto -->
+    </div></a> <!-- Fin del contenedor de la tarjeta de producto -->
 
   </div> <!-- Fin de la iteración *ngFor -->
 
