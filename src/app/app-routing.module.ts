@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'products/:id', component: ProductPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard', component: DashboardComponent,   canActivate: [TokenGuardAdmin]},
   { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]},
 ];
 
