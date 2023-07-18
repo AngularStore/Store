@@ -10,6 +10,7 @@ import { SuccessfulPayComponent} from './components/successful-pay/successfulPay
 import { TokenGuard } from './guard/auth.guard';
 import { TokenGuardAdmin } from './guard/admin.guard';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { WelcomeComponent} from './components/welcome/welcome.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'products', component: ProductspageComponent},
   {path: 'products/:id', component:  ProductPageComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'welcome', component: WelcomeComponent},
 ];
 
 @NgModule({
