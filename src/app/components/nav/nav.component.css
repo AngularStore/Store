@@ -45,6 +45,11 @@ header {
   padding: 30px;
 }
 
+.navbar-links ul .welcome {
+  font-weight: bold;
+  color: #cfa414;
+}
+
 /* Estilos al pasar el cursor por encima de los enlaces de la barra de navegación */
 .navbar ul li a:hover {
   color: #f5c62b;
@@ -66,7 +71,7 @@ header {
 @media (max-width: 1276px) {
   .navbar-links ul {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     top: 68px;
     right: 0px;
