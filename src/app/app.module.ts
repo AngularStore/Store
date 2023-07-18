@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
