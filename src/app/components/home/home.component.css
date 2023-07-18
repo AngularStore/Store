@@ -61,13 +61,13 @@
   display: inline-flex; /* Modifica el tipo de visualización del elemento */
   flex-direction: column; /* Modifica la dirección del flex container */
   position: relative; /* Modifica la posición del elemento */
-  left: 10%; /* Modifica la posición horizontal del elemento */
+  left: 32.5%; /* Modifica la posición horizontal del elemento */
   top: 5%; /* Modifica la posición vertical del elemento */
   padding: 0%; /* Modifica el relleno interno del elemento */
 }
 
 .triangleOne {
-  position: fixed; /* Modifica la posición del elemento */
+  position: absolute; /* Modifica la posición del elemento */
   right: 1px;
   width: 0; /* Modifica el ancho del elemento */
   height: 0; /* Modifica la altura del elemento */
@@ -78,7 +78,7 @@
 }
 
 .triangleTwo {
-  position: fixed; /* Modifica la posición del elemento */
+  position: absolute; /* Modifica la posición del elemento */
   right: 1px;
   width: 0; /* Modifica el ancho del elemento */
   height: 0; /* Modifica la altura del elemento */
@@ -88,8 +88,9 @@
 }
 
 .triangleThree {
-  position: fixed; /* Modifica la posición del elemento */
-  right: 1px;
+  position: absolute; /* Modifica la posición del elemento */
+  top: 1px;
+  right: 0px;
   width: 0; /* Modifica el ancho del elemento */
   height: 0; /* Modifica la altura del elemento */
   border-right: 85px solid transparent; /* Modifica el borde derecho */
