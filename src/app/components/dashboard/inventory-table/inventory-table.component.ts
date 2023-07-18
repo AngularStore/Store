@@ -4,7 +4,6 @@ import { MatTable } from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { InventoryTableDataSource, InventoryTableItem } from './inventory-table-datasource';
 import { ProductService } from 'src/app/product.service/product.service';
 
 @Component({
