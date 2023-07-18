@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'dashboard', component: DashboardComponent,   canActivate: [TokenGuardAdmin]},
-  { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]}
+  { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]},
   //{ path: 'paymentStatus/userId', canActivate: [TokenGuard,TokenGuardAdmin]}
   {path: 'successfulPay', component: SuccessfulPayComponent},
   {path: 'product-form', component: ProductFormComponent},
