@@ -68,7 +68,7 @@
     width: 50%;/* linea de codigo para que el componente tenga un ancho del 50% */
     height: 30px;/* linea de codigo para que el componente tenga un alto de 30px */
     text-align: center;/* linea de codigo para que el componente tenga un texto centrado */
-    border-radius: 10px;/* linea de codigo para que el componente tenga un borde redondeado del 10% */  
+    border-radius: 10px;/* linea de codigo para que el componente tenga un borde redondeado del 10% */
     cursor: pointer;/* linea de codigo para que el componente tenga un cursor de puntero */
     margin: 0px 0px 20px 0px;/* linea de codigo para que el componente tenga un margen de 0px en la parte superior, 0px en la parte derecha, 20px en la parte inferior y 0px en la parte izquierda */
     background-color: black;/* le da un color de fondo al componente */
@@ -93,7 +93,7 @@
     }
 
     .logoLogOut {
-        font-size: 1rem;/* linea de codigo para que el componente tenga un tamaño de letra de 1rem, rem sirve para que el tamaño de la letra se adapte a la pantalla */ 
+        font-size: 1rem;/* linea de codigo para que el componente tenga un tamaño de letra de 1rem, rem sirve para que el tamaño de la letra se adapte a la pantalla */
         height: 20px;/* linea de codigo para que el componente tenga un alto de 20px */
         margin: 10px 0px 30px 0px;/* linea de codigo para que el componente tenga un margen de 10px en la parte superior, 0px en la parte derecha, 30px en la parte inferior y 0px en la parte izquierda */
     }
