@@ -17,7 +17,7 @@
           </span>
           Productos
         </a></li>
-        <li><a href="#" *ngIf="!isLoggedInAdmin">
+        <li><a href="#" *ngIf="isLoggedIn  && !isLoggedInAdmin">
           <span class="material-symbols-outlined">
           shopping_cart_checkout
           </span>
