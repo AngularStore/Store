@@ -130,9 +130,13 @@
     }
     #buttonLogin, #buttonRegister{
         font-size: 12px;
+        
     }
     .principalContainerLogin{
         height: 450px;
-        width: 200px;
+        width:95%;
+    }
+    .buttonRegisterContainer, .buttonRegisterContainer, .buttonLoginContainer {
+        width: 80%;
     }
 }
