@@ -19,7 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/notFound/notFound.component';
 import { SuccessfulPayComponent } from './components/successful-pay/successfulPay.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
-import { MaterialModule } from './material-import/material.module';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +42,6 @@ import { MaterialModule } from './material-import/material.module';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    MaterialModule,
     HttpClientModule
   ],
   providers: [AuthService,
