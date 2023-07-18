@@ -4,6 +4,7 @@
 
 @media screen and (max-width: 600px) {
   .full-width-table {
-    min-width: 200px;
+    min-width: 100px;
+    max-width: 120px;
   }
 }
