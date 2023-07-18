@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   mat-elevation-z8{
     padding: 0 10;
   }
