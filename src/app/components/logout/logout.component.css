@@ -1,6 +1,6 @@
 /* Estilos para el componente de cierre de sesión */
 .mainBoxLogOut {
-    margin-top: 12%;/* linea de codigo para que el componente se ubique en la parte superior de la pagina */
+    margin-top: 1%;/* linea de codigo para que el componente se ubique en la parte superior de la pagina */
     margin-left: 38%;/* linea de codigo para que el componente se ubique en la parte izquierda de la pagina */
     width: 20%;/* linea de codigo para que el componente tenga un ancho del 20% */
     min-width: 300px;/* linea de codigo para que el componente tenga un ancho minimo de 300px */
