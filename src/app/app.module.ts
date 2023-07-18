@@ -48,6 +48,7 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
 
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
