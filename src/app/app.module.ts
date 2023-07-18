@@ -33,6 +33,7 @@ import { MatInputModule} from '@angular/material/input';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     SuccessfulPayComponent,
     ProductFormComponent,
     WelcomeComponent,
-    LogoutComponent
+    LogoutComponent,
+    CarouselComponent
   ],
   imports: [
     FormsModule,
