@@ -16,6 +16,7 @@ export class NavComponent {
   public isLoggedInAdmin: boolean = false;
   public showNavbar:boolean = false; //Se crea un bool para el navbar.
   public logo:string = '../../../assets/nav/img/koaj.png'; //Se crea una variable para el logo.
+  public username:string = ''
 
   constructor(private localStorageService : LocalStorageService){}
 
@@ -35,9 +36,10 @@ export class NavComponent {
     const token = this.localStorageService.getItem('token');
     if (token){
       this.isLoggedIn = true;
-      if (token.role == 'admin'){
+      if (token.user.role == 'admin'){
         this.isLoggedInAdmin = true;
       }
+      this.username = ` ${token.user.username}`
     }
   }
 
