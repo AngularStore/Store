@@ -33,6 +33,7 @@ import { MatInputModule} from '@angular/material/input';
 import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InventoryTableComponent } from './components/dashboard/inventory-table/inventory-table.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { InventoryTableComponent } from './components/dashboard/inventory-table/
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
   providers: [AuthService,
     HttpClient],

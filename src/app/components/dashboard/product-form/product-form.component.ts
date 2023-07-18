@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/product.service/product.service';
 import {MatSelectModule} from '@angular/material/select';
+import { ActivatedRoute } from '@angular/router';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { ActivatedRoute } from '@angular/router';
-import { Product } from './interface';
+
 
 
 @Component({
@@ -18,10 +20,15 @@ export class ProductFormComponent implements OnInit {
 
   //use product interface to initialize product, but don't use values
   // to make that form is empty
-product: any = {}
+product: any = {};
+message = '';
+action = '';
 
+  constructor(
+    private productService: ProductService,
+    private snackBar: MatSnackBar
+  ) {}
 
-  constructor(private productService: ProductService, ) { }
 
   ngOnInit(): void {
 // Do a petiton with getProduct(productID:number) to get the product to update
@@ -55,7 +62,10 @@ this.productService.getProduct(1).subscribe(
     this.productService.updateProductName(1, this.product.product).subscribe(
       (data: any) => {
         console.log(this.product.product);
-        console.log('Product updated successfully');
+        console.log(this.openSnackBar('Product updated successfully', 'OK'));
+        this.snackBar.open("Probando snackbar en parzibyte.me");
+        this.openSnackBar('Product updated successfully', 'OK')
+        console.log('Product updated successfully details');
       },
       (error: any) => {
         console.error(error);
@@ -63,4 +73,11 @@ this.productService.getProduct(1).subscribe(
     );
   }
 
+  //helpt to
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
 }

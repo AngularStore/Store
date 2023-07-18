@@ -1,3 +1,4 @@
+/* @import 'assets/css/material/indigo-pink.css'; */
 .MainContent {
   display: flex;
   flex-direction: column;
@@ -6,33 +7,36 @@
   margin-top: 20px;
 }
 .example-card {
-  min-width: auto;
-  max-width: 800px;
+  min-width: 80%;
+  max-width: 80%;
 }
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
-input {
-  min-width: 300px;
-}
 
 .Formulario {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   margin-top: 20px;
-  min-width: 500px;
-  gap: 20px;
+  width: 100%;
+
 }
 
-mat-form-field {
-  width: 250%;
-}
 mat-card-header {
   display: flex;
   flex-direction: column;
   min-height: 20%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
+mat-form-field {
+  margin-right: 12px;
 }
