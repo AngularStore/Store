@@ -41,7 +41,8 @@
     background: #F5F5F5 0% 0% no-repeat padding-box;      /* Color de fondo */    
     box-shadow: 0px 3px 6px #00000029;                    /* Sombra del contenedor */
     border-radius: 46px;                                    /* Borde redondeado */
-    opacity: 1;                                             /* Opacidad del contenedor */
+    opacity: 1;          
+                                       /* Opacidad del contenedor */
 }
 
 /*------------------IMAGENES------------------*/

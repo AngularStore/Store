@@ -17,7 +17,7 @@ export class CartItemComponent implements OnInit {
   name: any;
   price: any;
   quantity!: number;
-  productQuantity: any;
+  productQuantity!: number;
   product: any;
   add: number | any = 1;
 
@@ -61,7 +61,7 @@ export class CartItemComponent implements OnInit {
         const apiUrl3 = `https://koajstoreapi.onrender.com/api/inventory/product/${item.product.productID}`;
         this.http.get(apiUrl3).subscribe((response: any) => {
           /* Stock of the item */
-          this.productQuantity = response[0].quantity;
+          this.productQuantity = response.quantity;
         });
     });
   }
@@ -88,9 +88,14 @@ export class CartItemComponent implements OnInit {
   }
 
   increaseQuantity() {
-    this.quantity++;
-    this.add = 1;
-    this.updateCartItem();
+    console.log(this.quantity);
+    console.log(this.productQuantity);
+    console.log(this.quantity < this.productQuantity)
+    if (this.quantity < this.productQuantity){
+      this.quantity++;
+      this.add = 1;
+      this.updateCartItem();
+    }
   }
 
   updateCartItem() {
