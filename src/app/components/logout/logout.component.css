@@ -12,7 +12,7 @@
     border: 1px solid gray;/* linea de codigo para que el componente tenga un borde de 1px de color gris */
     border-radius: 10%;/* linea de codigo para que el componente tenga un borde redondeado del 10% */
     font-family: Helvetica;/* linea de codigo para que el componente tenga una fuente de letra Helvetica */
-    box-shadow: 0px 10px 8px 0px black;/* linea de codigo para darle una sombra al componente */
+    box-shadow: 0px 5px 4px 0px black;/* linea de codigo para darle una sombra al componente */
     margin-bottom: 20vh;/* linea de codigo para que el componente tenga un margen inferior de 15px */
 }
 
