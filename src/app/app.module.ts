@@ -45,6 +45,7 @@ import {MatTable} from '@angular/material/table';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [

@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent,   canActivate: [TokenGuardAdmin]},
   { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]},
   //{ path: 'paymentStatus/userId', canActivate: [TokenGuard,TokenGuardAdmin]}
-  {path: 'successfulPay', component: SuccessfulPayComponent},
+  {path: 'paymentStatus/:userID', component: SuccessfulPayComponent},
   {path: 'product-form', component: ProductFormComponent},
   {path: 'cart', component: CartComponent},
   {path: 'notFound', component: NotFoundComponent},
