@@ -11,12 +11,12 @@
       <form (ngSubmit)="login()">
         <!-- Campo de entrada para el nombre de usuario -->
         <div class="usernameLoginContainer">
-          <label for="username" style="margin: 0 20px;">Usuario:</label>
+          <label for="username" style="margin: 0 20px;" class="username">Usuario:</label>
           <input type="text" id="usernameLogin" [(ngModel)]="username" name="username" required>
         </div>
         <!-- Campo de entrada para la contraseña -->
         <div class="passwordLoginContainer">
-          <label for="password" style="margin: 0 20px;">Contraseña:</label>
+          <label for="password" style="margin: 0 20px;" class="userpassword">Contraseña:</label>
           <input type="password" id="passwordLogin" [(ngModel)]="password" name="password" required>
         </div>
         <!-- Botón para enviar el formulario -->

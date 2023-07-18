@@ -120,3 +120,19 @@
     text-decoration: none;
     color: white;
 }
+
+@media screen and (max-width: 460px) {
+    .titleLoginContainer{
+        font-size: 10px;
+    }
+    .username, .userpassword{
+        font-size: 12px;
+    }
+    #buttonLogin, #buttonRegister{
+        font-size: 12px;
+    }
+    .principalContainerLogin{
+        height: 450px;
+        width: 200px;
+    }
+}
