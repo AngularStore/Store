@@ -3,8 +3,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .full-width-table {
-    min-width: 100px;
-    max-width: 120px;
+  mat-elevation-z8{
+    padding: 0 10;
+  }
+  .id {
+    display: none;
   }
 }
