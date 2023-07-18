@@ -13,19 +13,22 @@ import { TokenGuardAdmin } from './guard/admin.guard';
 import { WelcomeComponent} from './components/welcome/welcome.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
+import { CombinedTokenGuard } from './guard/combinedLogin.guard';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, canActivate:[CombinedTokenGuard]},
   { path: 'logout', component: LogoutComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent, canActivate:[CombinedTokenGuard] },
   { path: 'products', component: ProductspageComponent },
   { path: 'products/:id', component: ProductPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'dashboard', component: DashboardComponent,   canActivate: [TokenGuardAdmin]},
-  { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]},
+  { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]}
+  //{ path: 'paymentStatus/userId', canActivate: [TokenGuard,TokenGuardAdmin]}
 ];
 
 @NgModule({
