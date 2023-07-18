@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   cartIDArray: number[] = [];
   quantity: number = 1;
   ProductQuantity: number = 10;
+  paymentURL: string = '';
 
 
   constructor(private http: HttpClient) {}
@@ -27,10 +28,10 @@ export class CartComponent implements OnInit {
     this.userID = userIdObject.user.userID;
     console.log(userIdObject.user.userID);
     const apiUrl = `https://koajstoreapi.onrender.com/api/cart/user/${userIdObject.user.userID}`;
-
+  
     this.http.get(apiUrl).subscribe((response: any) => {
       this.cartItems = response;
-
+  
       /*iterate through the cartItems array and add the price of each item to the totalAmount variable*/
       for (let i = 0; i < this.cartItems.length; i++) {
         this.totalAmount += (this.cartItems[i].product.price)*(this.cartItems[i].quantity);
@@ -51,14 +52,17 @@ export class CartComponent implements OnInit {
       userID: this.userID,
       shippingAddress: "Perreira"
     };
-
+  
     this.http.post(apiUrl, payload).subscribe((response: any) => {
-      // Aquí puedes realizar cualquier acción adicional después de realizar el checkout, si es necesario.
+      // Asignar la URL de pago a la propiedad paymentURL
+      this.paymentURL = response.url;
       console.log('Checkout response:', response);
-    
-
+  
+      // Redireccionar la página actual a la URL de pago
+      if (this.paymentURL) {
+        window.location.href = this.paymentURL;
+      }
     });
-    
   }
 
   
