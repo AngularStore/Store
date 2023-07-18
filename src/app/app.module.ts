@@ -34,6 +34,11 @@ import { ProductFormComponent } from './components/dashboard/product-form/produc
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InventoryTableComponent } from './components/dashboard/inventory-table/inventory-table.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -71,7 +76,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatOptionModule,
     MatSelectModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
   ],
   providers: [AuthService,
     HttpClient],

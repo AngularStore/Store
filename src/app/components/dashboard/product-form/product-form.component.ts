@@ -62,13 +62,12 @@ this.productService.getProduct(1).subscribe(
     this.productService.updateProductName(1, this.product.product).subscribe(
       (data: any) => {
         console.log(this.product.product);
-        console.log(this.openSnackBar('Product updated successfully', 'OK'));
-        this.snackBar.open("Probando snackbar en parzibyte.me");
         this.openSnackBar('Product updated successfully', 'OK')
         console.log('Product updated successfully details');
       },
       (error: any) => {
         console.error(error);
+        this.openSnackBar("Product can't update", 'OK')
       }
     );
   }
@@ -77,7 +76,7 @@ this.productService.getProduct(1).subscribe(
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
-      duration: 2000,
+      duration: 5000,
     });
   }
 }
