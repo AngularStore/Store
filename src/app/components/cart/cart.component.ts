@@ -24,6 +24,7 @@ export class CartComponent implements OnInit {
   getItems() {
     this.userID = localStorage.getItem('token');
     let userIdObject = JSON.parse(this.userID);
+    this.userID = userIdObject.user.userID;
     console.log(userIdObject.user.userID);
     const apiUrl = `https://koajstoreapi.onrender.com/api/cart/user/${userIdObject.user.userID}`;
 
@@ -42,6 +43,22 @@ export class CartComponent implements OnInit {
       console.log(this.totalAmount);
       console.log(response);
     }); 
+  }
+
+  checkout() {
+    const apiUrl = 'https://koajstoreapi.onrender.com/api/orders';
+    const payload = {
+      userID: this.userID,
+      shippingAddress: "Perreira"
+    };
+
+    this.http.post(apiUrl, payload).subscribe((response: any) => {
+      // Aquí puedes realizar cualquier acción adicional después de realizar el checkout, si es necesario.
+      console.log('Checkout response:', response);
+    
+
+    });
+    
   }
 
   

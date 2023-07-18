@@ -19,7 +19,7 @@ export class CartItemComponent implements OnInit {
   quantity!: number;
   productQuantity: any;
   product: any;
-  add:number = 1;
+  add: number | any = 1;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -58,11 +58,8 @@ export class CartItemComponent implements OnInit {
       this.http.get(apiUrl3).subscribe((response: any) => {
         /* Stock of the item */
         this.productQuantity = response[0].quantity;
-      }
-      );
+      });
     });
-
-    
   }
 
   removeItem() {
@@ -92,9 +89,11 @@ export class CartItemComponent implements OnInit {
 
   updateCartItem() {
     const apiUrl = `https://koajstoreapi.onrender.com/api/cart`;
-    const payload = { userID: this.userID,
-                      productID: this.product,
-                      quantity: this.add};
+    const payload = {
+      userID: this.userID,
+      productID: this.product,
+      quantity: this.add
+    };
     this.http.post(apiUrl, payload).subscribe((response: any) => {
       // Aquí puedes realizar cualquier acción adicional después de actualizar la cantidad del item en el carrito, si es necesario.
       console.log('Item quantity updated:', response);
