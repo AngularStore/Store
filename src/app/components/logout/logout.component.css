@@ -1,6 +1,6 @@
 /* Estilos para el componente de cierre de sesión */
 .mainBoxLogOut {
-    margin-top: 1%;/* linea de codigo para que el componente se ubique en la parte superior de la pagina */
+    margin-top: 10%;/* linea de codigo para que el componente se ubique en la parte superior de la pagina */
     margin-left: 38%;/* linea de codigo para que el componente se ubique en la parte izquierda de la pagina */
     width: 20%;/* linea de codigo para que el componente tenga un ancho del 20% */
     min-width: 300px;/* linea de codigo para que el componente tenga un ancho minimo de 300px */
@@ -12,8 +12,8 @@
     border: 1px solid gray;/* linea de codigo para que el componente tenga un borde de 1px de color gris */
     border-radius: 10%;/* linea de codigo para que el componente tenga un borde redondeado del 10% */
     font-family: Helvetica;/* linea de codigo para que el componente tenga una fuente de letra Helvetica */
-    box-shadow: 0px 10px 8px 0px black;/* linea de codigo para darle una sombra al componente */
-    margin-bottom: 15px;/* linea de codigo para que el componente tenga un margen inferior de 15px */
+    box-shadow: 0px 5px 4px 0px black;/* linea de codigo para darle una sombra al componente */
+    margin-bottom: 20vh;/* linea de codigo para que el componente tenga un margen inferior de 15px */
 }
 
 /* Estilos para el logo de KOAJ */
