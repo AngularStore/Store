@@ -27,6 +27,10 @@ export class NavComponent {
     console.log(this.showNavbar);
   }
 
+  public logoutPress(): void {
+    this.localStorageService.removeItem('token');
+  }
+
   ngOnInit(): void {
     const token = this.localStorageService.getItem('token');
     if (token){
