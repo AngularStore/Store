@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from './user.service';
-import { User } from './user.model'; 
+import { User } from './user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import { User } from './user.model';
 })
 export class RegisterComponent {
   user: User = {
-    username:'',
+    username: '',
     password: '',
     fullName: '',
     email: '',
@@ -17,20 +18,19 @@ export class RegisterComponent {
     address: ''
   };
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) {}
 
   register() {
     // Registra al usuario utilizando el servicio UserService
-    this.userService.registerUser(this.user)
-      .subscribe(
-        response => {
-          console.log('Usuario registrado exitosamente');
-          // Puedes realizar alguna acción adicional después del registro exitoso, como redirigir a otra página.
-        },
-        error => {
-          console.error('Error al registrar el usuario:', error);
-          // Maneja el error de acuerdo a tus necesidades.
-        }
-      );
+    this.userService.registerUser(this.user).subscribe(
+      response => {
+        console.log('Usuario registrado exitosamente');
+        this.router.navigate(['welcome']); // Redirige al componente WelcomeComponent
+      },
+      error => {
+        console.error('Error al registrar el usuario:', error);
+        // Maneja el error de acuerdo a tus necesidades.
+      }
+    );
   }
 }

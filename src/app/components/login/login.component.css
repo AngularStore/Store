@@ -22,8 +22,8 @@
 .principalContainerLogin {
     display: block; /* Establece el contenedor principal del formulario como un bloque */
     background-color: white; /* Establece el color de fondo del contenedor principal */
-    width: 47%; /* Establece el ancho del contenedor principal */
-    height: 69%; /* Establece la altura del contenedor principal */
+    width: 55%; /* Establece el ancho del contenedor principal */
+    height: 75%; /* Establece la altura del contenedor principal */
     box-shadow: 0px 3px 6px #00000029; /* Agrega una sombra al contenedor principal */
     border: 1px solid #C4C4C4; /* Agrega un borde al contenedor principal */
     border-radius: 50px; /* Agrega bordes redondeados al contenedor principal */
@@ -108,7 +108,8 @@
 }
 
 #buttonLogin,
-#buttonRegister{
+#buttonRegister,
+#buttonBack{
     color: white; /* Establece el color del texto en blanco para los botones de inicio de sesión y registro */
     width: 100%; /* Establece el ancho al 100% para los botones de inicio de sesión y registro */
     height: 40px; /* Establece la altura en 40px para los botones de inicio de sesión y registro */
@@ -118,4 +119,20 @@
 .buttonRegisterContainer a{
     text-decoration: none;
     color: white;
+}
+
+@media screen and (max-width: 460px) {
+    .titleLoginContainer{
+        font-size: 10px;
+    }
+    .username, .userpassword{
+        font-size: 12px;
+    }
+    #buttonLogin, #buttonRegister{
+        font-size: 12px;
+    }
+    .principalContainerLogin{
+        height: 450px;
+        width: 200px;
+    }
 }

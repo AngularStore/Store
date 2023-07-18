@@ -55,7 +55,7 @@ padding: 10px; /* Set un espacio de relleno de 10 píxeles alrededor del element
 }
 
 /* Estilos específicos para pantallas con un ancho máximo de 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 775px) {
 /* Estilos para el contenedor de imágenes "container_img" */
 .container_img {
 flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
@@ -90,3 +90,50 @@ margin-block-end: 5em; /* Set un margen de bloque de final de 5 veces el tamaño
 margin-inline-start: 9%; /* Set un margen de inicio de línea de 9% del ancho del elemento */
 margin-inline-end: 15px; /* Set un margen de final de línea de 15 píxeles */
 }
+
+@media screen and (max-width: 775px) {
+    /* Estilos para el contenedor de imágenes "container_img" */
+    #img2{
+        display: none;
+    }
+    .container_text{
+        font-size: 20px;
+    }
+    #title{
+        font-size: 50px;
+    }
+    .text_2_benefits{
+        font-size: 15px;
+    }
+    .container_img{
+        align-items: center;
+
+    }
+    /* Estilos para los elementos secundarios de "container_img" con clase "item" */
+    .container_img .item {
+    flex: none; /* Deshabilita la flexibilidad del elemento */
+    font-size: 35px; /* Set el tamaño de fuente del texto en 35 píxeles */
+    }
+    }
+
+@media screen and (max-width: 445px) {
+    /* Estilos para el contenedor de imágenes "container_img" */
+    .container_text{
+        font-size: 13px;
+    }
+    #title{
+        font-size: 35px;
+    }
+    .text_2_benefits{
+        font-size: 00px;
+    }
+    .container_img{
+        align-items: center;
+        
+    }
+    /* Estilos para los elementos secundarios de "container_img" con clase "item" */
+    .container_img .item {
+    flex: none; /* Deshabilita la flexibilidad del elemento */
+    font-size: 35px; /* Set el tamaño de fuente del texto en 35 píxeles */
+    }
+    }

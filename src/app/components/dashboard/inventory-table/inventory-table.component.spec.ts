@@ -4,15 +4,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
-import { InventoryComponent } from './inventory.component';
+import { InventoryTableComponent } from './inventory-table.component';
 
-describe('InventoryComponent', () => {
-  let component: InventoryComponent;
-  let fixture: ComponentFixture<InventoryComponent>;
+describe('InventoryTableComponent', () => {
+  let component: InventoryTableComponent;
+  let fixture: ComponentFixture<InventoryTableComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [InventoryComponent],
+      declarations: [InventoryTableComponent],
       imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
@@ -23,7 +23,7 @@ describe('InventoryComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InventoryComponent);
+    fixture = TestBed.createComponent(InventoryTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CreateProductComponent } from './create-product.component';
+import { LogoutComponent } from './logout.component';
 
-describe('CreateProductComponent', () => {
-  let component: CreateProductComponent;
-  let fixture: ComponentFixture<CreateProductComponent>;
+// Descripción del componente LogoutComponent y su prueba unitaria
+describe('LogoutComponent', () => {
+  let component: LogoutComponent;
+  let fixture: ComponentFixture<LogoutComponent>;
 
+  // Configuración inicial antes de cada prueba
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CreateProductComponent]
+      declarations: [LogoutComponent]
     });
-
     // Crear una instancia del componente y del fixture
-    fixture = TestBed.createComponent(CreateProductComponent);
+    fixture = TestBed.createComponent(LogoutComponent);
     component = fixture.componentInstance;
-
     // Detectar los cambios iniciales en el componente
     fixture.detectChanges();
   });
