@@ -164,3 +164,24 @@
       font: normal normal bold 10px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
   }
 }
+
+@media (max-width: 480px){
+  .imageHome {
+    width: 350px; /* Modifica el ancho del elemento */
+    height: 300; /* Modifica la altura del elemento */
+}
+}
+
+@media (max-width: 380px){
+  .imageHome {
+    width: 320px; /* Modifica el ancho del elemento */
+    height: 285; /* Modifica la altura del elemento */
+}
+}
+
+@media (max-width: 300px){
+  .imageHome {
+    width: 250px; /* Modifica el ancho del elemento */
+    height: 215px; /* Modifica la altura del elemento */
+}
+}
