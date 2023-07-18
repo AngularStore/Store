@@ -14,6 +14,7 @@
 .quantity {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
     margin: 30px;
   }
   
@@ -40,7 +41,8 @@
     background: #F5F5F5 0% 0% no-repeat padding-box;      /* Color de fondo */    
     box-shadow: 0px 3px 6px #00000029;                    /* Sombra del contenedor */
     border-radius: 46px;                                    /* Borde redondeado */
-    opacity: 1;                                             /* Opacidad del contenedor */
+    opacity: 1;          
+                                       /* Opacidad del contenedor */
 }
 
 /*------------------IMAGENES------------------*/
@@ -110,7 +112,7 @@
 /*------------------BOTON Y PRECIO------------------*/
 
 .below {                                                    /* Contenedor del boton y el precio */  
-    display: flex;                                          /* Mostrar en linea los elementos */
+    display: block;                                         /* Mostrar en linea los elementos */
     margin-top: 20px;                                       /* Margen superior */
 }
 
@@ -127,24 +129,25 @@
 /*------------------BOTON ADD TO CART------------------*/
 
 
-.btn-primary {                                              /* Contenedor del boton */            
-    height: 72px;                                           /* Alto del contenedor */                  
-    width: 30%;                                             /* Ancho del contenedor */
+.quantity .btn-primary {                                              /* Contenedor del boton */            
+    height: 40px;                                           /* Alto del contenedor */                  
+    width: 150px;                                             /* Ancho del contenedor */
     float: right;                                           /* Flotar a la derecha */
-    border-radius: 36px;                                    /* Borde redondeado */                  
-    margin-right: 10%;                                      /* Margen derecho */              
+    border-radius: 20px;                                    /* Borde redondeado */                  
+    margin-left: 5px;                               /* Margen derecho */              
     background-color: #000000;                            /* Color de fondo */            
     color: #FFFFFF;                                       /* Color de la fuente */
-    font-size: 30px;                                        /* Tamaño de la fuente */
+    font-size: 17px;                                        /* Tamaño de la fuente */
     font-family: Helvetica;                                 /* Tipo de fuente */
     font-weight: bold;                                      /* Grosor de la fuente */       
     text-decoration: none;                                  /* Quitar decoracion de texto */
     text-align: center;                                     /* Alinear texto al centro */
-    line-height: 72px;                                      /* Altura de linea */             
-    margin-bottom: 10px;                                    /* Margen inferior */
+    line-height: 42px;
+    cursor: pointer;                                      /*Altura de linea*/             
+                                      /* Margen inferior */
 }
 
-.btn-primary:hover {                                        /* Contenedor del boton al pasar el mouse */
+.quantity .btn-primary:hover {                                        /* Contenedor del boton al pasar el mouse */
     background-color: #282828;                            /* Color de fondo */        
     color: #FFFFFF;                                       /* Color de la fuente */
     text-decoration: none;                                  /* Quitar decoracion de texto */
@@ -153,9 +156,13 @@
 /*------------------MEDIA QUERIES------------------*/
 
 @media (max-width: 1100px) {
-    .btn-primary {
-        font-size: 20px;
+    .quantity .btn-primary {
         justify-content: center;
+        text-align: center;
+    }
+    .quantity span {
+    margin: 2px 10px;
+    font-size: 14px;
     }
 }
 
@@ -170,8 +177,7 @@
         font-size: 38px;
     }
 
-    .btn-primary{
-        height: 40px;
+    .quantity .btn-primary{
         line-height: 40px;
     }
 }
@@ -189,27 +195,33 @@
         font-size: 30px;
     }
 
-    .btn-primary {
+    .quantity .btn-primary {
         height: 35px;
-        width: 40%;
         font-size: 18px;
         line-height: 35px;
     }
 }
 
+@media (max-width: 671px) {
+    .quantity .btn-primary {
+        font-size: 15px;
+    }
+}
 /*------------------MEDIA QUERIES------------------*/
 
 @media (max-width: 571px) {
-    .btn-primary {
+    .quantity .btn-primary {
+        width: 150px;
         font-size: 15px;
     }
 }
 
 /*------------------MEDIA QUERIES------------------*/
 
-@media (max-width: 520px) {
-    .btn-primary {
-        font-size: 12px;
+@media (max-width: 525px) {
+    .quantity .btn-primary {
+        font-size: 15px;
+        width: 130px;
     }
 }
 
@@ -240,11 +252,11 @@
         font-size: 40px;
     }
 
-    .btn-primary {
-        height: 35px;
-        width: 40%;
-        font-size: 13px;
-        line-height: 16px;
+    .quantity .btn-primary {
+        
+        width: 100px;
+        font-size: 12px;
+        
     }
 }
 
@@ -295,7 +307,7 @@
         margin:10px;
     }
 
-    .btn-primary {
+    .quantity .btn-primary {
         height: 25px;
         width: 50%;
         margin-top: 5px;
@@ -304,6 +316,7 @@
         justify-content: center;
         text-align: center;
         line-height: 25px;
+        overflow-y: hidden;
     }
 
     .principalContainer {
@@ -313,15 +326,49 @@
 
 /*------------------MEDIA QUERIES------------------*/
 
-@media (max-width: 330px) {
+@media (max-width: 380px) {
 
-    .btn-primary{
+    .quantity .btn-primary{
         height: 18px;
-        font-size: 7px;
+        font-size: 5px;
         line-height: 15px;
     }
 
     .descriptionText {
         font-size: 8px;
     }
+    .quantity button {
+        padding: 3px 8px;
+        font-size: 10px;
+      }
+      
+      .quantity span {
+        margin: 0 9px;
+        font-size: 12px;
+      }
+}
+@media (max-width: 380px) {
+
+    .quantity button {
+        padding: 2px 6px;
+        font-size: 8px;
+      }
+      
+      .quantity span {
+        margin: 0 9px;
+        font-size: 10px;
+      }
+}
+
+@media (max-width: 300px) {
+
+    .quantity button {
+        padding: 1px 4px;
+        font-size: 8px;
+      }
+      
+      .quantity span {
+        margin: 0 8px;
+        font-size: 8px;
+      }
 }
