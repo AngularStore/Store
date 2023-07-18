@@ -30,7 +30,9 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatOptionModule} from '@angular/material/core';
 import { MatSelectModule} from '@angular/material/select';
 import { MatInputModule} from '@angular/material/input';
-import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { LogoutComponent } from './components/logout/logout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InventoryTableComponent } from './components/dashboard/inventory-table/inventory-table.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -38,7 +40,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-
 
 @NgModule({
   declarations: [
@@ -55,8 +56,11 @@ import { MatPaginator } from '@angular/material/paginator';
     NotFoundComponent,
     SuccessfulPayComponent,
     ProductFormComponent,
+    WelcomeComponent,
+    LogoutComponent,
     DashboardComponent,
-    InventoryTableComponent
+    InventoryTableComponent,
+    
   ],
   imports: [
     FormsModule,

@@ -3,7 +3,7 @@
   <div class="principalContainerLogin">
     <!-- Título de la página de inicio de sesión -->
     <div class="titleLoginContainer">
-      <h1>Login</h1>
+      <h1>INICIAR SESIÓN</h1>
     </div>
     <!-- Formulario de inicio de sesión -->
     <div class="principalContainerLoginForm">
@@ -11,22 +11,26 @@
       <form (ngSubmit)="login()">
         <!-- Campo de entrada para el nombre de usuario -->
         <div class="usernameLoginContainer">
-          <label for="username" style="margin: 0 20px;">User:</label>
+          <label for="username" style="margin: 0 20px;">Usuario:</label>
           <input type="text" id="usernameLogin" [(ngModel)]="username" name="username" required>
         </div>
         <!-- Campo de entrada para la contraseña -->
         <div class="passwordLoginContainer">
-          <label for="password" style="margin: 0 20px;">Password:</label>
+          <label for="password" style="margin: 0 20px;">Contraseña:</label>
           <input type="password" id="passwordLogin" [(ngModel)]="password" name="password" required>
         </div>
         <!-- Botón para enviar el formulario -->
         <div class="buttonLoginContainer">
-          <button id="buttonLogin" type="submit">LOGIN</button>
+          <button id="buttonLogin" type="submit">INICIAR SESIÓN</button>
         </div>
         <!-- Botón para registrarse -->
         <div class="buttonRegisterContainer">
-          <button id="buttonRegister"><a href="/register">REGISTER</a></button>
+          <button routerLink="/register" id="buttonRegister">REGISTRARSE</button>
         </div>
+        <div class="buttonRegisterContainer">
+          <button routerLink="/" id="buttonRegister">ATRÁS</button>
+        </div>
+
       </form>
     </div>
   </div>

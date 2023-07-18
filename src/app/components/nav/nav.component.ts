@@ -1,5 +1,6 @@
 //Se importa @component de angular.
 import { Component } from '@angular/core';
+import { LocalStorageService } from 'src/app/local-storage.service';
 
 //Se crea el componente de angular.
 @Component({
@@ -10,11 +11,14 @@ import { Component } from '@angular/core';
 })
 //Se exporta la clase del componente.
 export class NavComponent {
-  //Se crea una variable para el logo.
-  logo:string = '../../../assets/nav/img/koaj.png';
 
-  //Se crea un bool para el navbar.
-  public showNavbar:boolean = false;
+  public isLoggedIn: boolean = false;
+  public isLoggedInAdmin: boolean = false;
+  public showNavbar:boolean = false; //Se crea un bool para el navbar.
+  public logo:string = '../../../assets/nav/img/koaj.png'; //Se crea una variable para el logo.
+  public username:string = ''
+
+  constructor(private localStorageService : LocalStorageService){}
 
   //Función para mostrar el navbar responsive.
   public toggleNavbar(): void {
@@ -22,6 +26,21 @@ export class NavComponent {
     this.showNavbar = !this.showNavbar;
     //Mostrar en consola el valor seleccionado.
     console.log(this.showNavbar);
+  }
+
+  public logoutPress(): void {
+    this.localStorageService.removeItem('token');
+  }
+
+  ngOnInit(): void {
+    const token = this.localStorageService.getItem('token');
+    if (token){
+      this.isLoggedIn = true;
+      if (token.user.role == 'admin'){
+        this.isLoggedInAdmin = true;
+      }
+      this.username = ` ${token.user.username}`
+    }
   }
 
 }
