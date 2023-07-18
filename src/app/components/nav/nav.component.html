@@ -11,12 +11,42 @@
       <!-- Se define el listado del menu -->
       <ul [ngClass]="{ 'show': showNavbar }">
         <li class="welcome">¡Bienvenido{{username}}!</li>
-        <li><a href="products">Productos</a></li>
-        <li><a href="#">Carrito</a></li>
-        <li><a href="#" *ngIf="isLoggedIn && isLoggedInAdmin">Inventario</a></li>
-        <li><a href="about">¿Quienes somos?</a></li>
-        <li><a href="login" *ngIf="!isLoggedIn">Iniciar Sesion</a></li>
-        <li><a href="" (click)="logoutPress()" routerLink="/logout" *ngIf="isLoggedIn">Cerrar Sesion</a></li>
+        <li><a href="products">
+          <span class="material-symbols-outlined">
+            laundry
+          </span>
+          Productos
+        </a></li>
+        <li><a href="#" *ngIf="isLoggedIn  && !isLoggedInAdmin">
+          <span class="material-symbols-outlined">
+          shopping_cart_checkout
+          </span>
+          Carrito
+        </a></li>
+        <li><a href="#" *ngIf="isLoggedIn && isLoggedInAdmin">
+          <span class="material-symbols-outlined">
+          inventory
+          </span>
+          Inventario
+        </a></li>
+        <li><a href="about" *ngIf="!isLoggedInAdmin">
+          <span class="material-symbols-outlined">
+            perm_contact_calendar
+          </span>
+          ¿Quienes somos?
+        </a></li>
+        <li><a href="login" *ngIf="!isLoggedIn">
+          <span class="material-symbols-outlined">
+          login
+          </span>
+          Iniciar Sesion
+        </a></li>
+        <li><a href="" (click)="logoutPress()" *ngIf="isLoggedIn">
+          <span class="material-symbols-outlined">
+            logout
+          </span>
+          Cerrar Sesion
+        </a></li>
       </ul>
     </div>
   </nav>

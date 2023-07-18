@@ -10,7 +10,7 @@ export class TokenGuardAdmin implements CanActivate {
 
    canActivate(): boolean {
     const token = this.localStorageService.getItem('token')
-    if (token.role === 'admin') {
+    if (token.user.role === 'admin') {
       return true;
     } else {
       this.router.navigate(['/login']);
