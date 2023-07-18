@@ -5,7 +5,6 @@
   background-position: center ;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .rightArrow {
@@ -41,9 +40,6 @@
   margin-bottom: 20px;
   position: relative;
 }
-
-
-
 .dotsContainer {
   display: flex;
   justify-content: center;
