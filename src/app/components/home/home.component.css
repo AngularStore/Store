@@ -155,6 +155,7 @@
 
   .descriptionHome {
       width: 300px; /* Modifica el ancho del elemento */
+      
       font: normal normal bold 20px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto */
   }
 
@@ -205,4 +206,38 @@
   display: flex;
   justify-content: center;
   margin-top: 20px; /* Ajusta el espacio desde la parte inferior del slider */
+}
+@media (max-width: 420px){
+  .imageHome {
+    width: 360px; /* Modifica el ancho del elemento */
+    height: 300px; /* Modifica la altura del elemento */
+}
+.triangles-container-bottom, .triangles-container-top{
+  display: none;
+
+}
+}
+@media (max-width: 380px){
+  .imageHome {
+    width: 335px; /* Modifica el ancho del elemento */
+    height: 290px; /* Modifica la altura del elemento */
+}
+}
+@media (max-width: 365px){
+  .imageHome {
+    width: 300px; /* Modifica el ancho del elemento */
+    height: 250px; /* Modifica la altura del elemento */
+}
+}
+@media (max-width: 365px){
+  .imageHome {
+    width: 300px; /* Modifica el ancho del elemento */
+    height: 250px; /* Modifica la altura del elemento */
+}
+}
+@media (max-width: 335px){
+  .imageHome {
+    width: 250px; /* Modifica el ancho del elemento */
+    height: 200px; /* Modifica la altura del elemento */
+}
 }

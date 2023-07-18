@@ -34,8 +34,8 @@
 }
 
 .slider {
-  width: 900px; /* Cambia este valor al ancho deseado */
-  height: 700px; /* Altura ajustable según tus necesidades */
+  width: 800px; /* Cambia este valor al ancho deseado */
+  height: 650px; /* Altura ajustable según tus necesidades */
   overflow: hidden;
   margin-bottom: 20px;
   position: relative;
@@ -53,14 +53,55 @@
   cursor: pointer;
   font-size: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .slider {
-    height: 300px; /* Ajusta la altura para pantallas pequeñas */
+    height: 375px; /* Ajusta la altura para pantallas pequeñas */
+    width: 800px;
   }
 
   .rightArrow, .leftArrow {
     font-size: 25px; /* Tamaño de flechas más pequeño para pantallas pequeñas */
   }
+}
+@media (max-width: 868px) {
+  .slider {
+    height: 175px; /* Ajusta la altura para pantallas pequeñas */
+    width: 650px;
+  }
+
+  .rightArrow, .leftArrow {
+    font-size: 25px; /* Tamaño de flechas más pequeño para pantallas pequeñas */
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    height: 175px; /* Ajusta la altura para pantallas pequeñas */
+    width: 450px;
+  }
+
+  .rightArrow, .leftArrow {
+    font-size: 20px; /* Tamaño de flechas más pequeño para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    height: 150px; /* Ajusta la altura para pantallas pequeñas */
+    width: 300px;
+  }
+
+  .rightArrow, .leftArrow {
+    font-size: 10px; /* Tamaño de flechas más pequeño para pantallas aún más pequeñas */
+  }
+}
+
+/* Estilos para el contenedor del carrusel */
+.carrouselContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px; /* Ajusta este valor según tus necesidades */
 }
 
 @media (max-width: 576px) {
@@ -72,12 +113,13 @@
     font-size: 16px; /* Tamaño de flechas más pequeño para pantallas aún más pequeñas */
   }
 }
+@media (max-width: 350px) {
+  .slider {
+    height: 200px; /* Ajusta la altura para pantallas aún más pequeñas */
+    width: 225px;
+  }
 
-/* Estilos para el contenedor del carrusel */
-.carrouselContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px; /* Ajusta este valor según tus necesidades */
+  .rightArrow, .leftArrow {
+    font-size: 16px; /* Tamaño de flechas más pequeño para pantallas aún más pequeñas */
+  }
 }

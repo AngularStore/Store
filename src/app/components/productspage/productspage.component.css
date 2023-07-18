@@ -108,3 +108,26 @@
         margin-bottom: 1em;
     }
   }
+
+  @media screen and (max-width: 330px) {
+    .productsTitle {
+      font-size: 40px;
+  }
+
+  .productCard{
+    width: 150px;
+    height: 300px;
+  }
+  }
+  @media screen and (max-width: 280px) {
+    .productsTitle {
+      font-size: 30px;
+  }
+  h2{
+    font-size: 15px;
+  }
+  .productCard{
+    width: 130px;
+    height: 250px;
+  }
+  }
