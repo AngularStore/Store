@@ -45,6 +45,9 @@ import {MatTable} from '@angular/material/table';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
+
 import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
@@ -68,7 +71,8 @@ import { RouterModule, Routes } from '@angular/router';
     InventoryTableComponent,
     CarouselComponent,
     CartComponent,
-    CartItemComponent
+    CartItemComponent,
+    AdminProfileComponent
   ],
   imports: [
     FormsModule,
@@ -90,7 +94,8 @@ import { RouterModule, Routes } from '@angular/router';
     MatInputModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatRadioModule
   ],
   providers: [AuthService,
     HttpClient],

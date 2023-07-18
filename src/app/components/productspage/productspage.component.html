@@ -6,10 +6,10 @@
 <div class="productGrid">
 
   <!-- Directiva *ngFor para iterar sobre la matriz "shirts" -->
-  <div *ngFor="let shirt of shirts">
+  <div *ngFor="let shirt of shirts; let i = index">
 
     <!-- Contenedor de la tarjeta de producto con la clase "productCard" -->
-    <a href={{rutes[shirt.productID]}}><div class="productCard">
+    <a href={{rutes[i]}}><div class="productCard">
 
       <!-- Imagen del producto con la URL enlazada a la propiedad "imageURL" del primer objeto "productImages" -->
       <img [src]="shirt.productImages[0].imageURL" alt="Shirt Image" class="productImage"/>

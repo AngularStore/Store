@@ -1,3 +1,4 @@
+<app-nav></app-nav>
 <div class="cart">
   <div> 
     <h1>Tu carrito de compras</h1>
@@ -8,11 +9,10 @@
   
   <div class="checkout" *ngIf="totalAmount > 0">
     <p>Total: ${{ totalAmount }}</p>
-    <button><a href="#">Continuar comprando</a></button>
+    <button><a href="products">Continuar comprando</a></button>
     <button (click)="checkout()">Pagar</button>
   </div>
   
   <div class="emptyCartMessage" *ngIf="totalAmount <= 0">
     <p>Tu carrito está vacío.</p>
   </div>
-</div>
