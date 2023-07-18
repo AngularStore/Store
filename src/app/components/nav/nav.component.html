@@ -16,7 +16,7 @@
         <li><a href="#" *ngIf="isLoggedIn && isLoggedInAdmin">Inventario</a></li>
         <li><a href="about">¿Quienes somos?</a></li>
         <li><a href="login" *ngIf="!isLoggedIn">Iniciar Sesion</a></li>
-        <li><a href="" (click)="logoutPress()" *ngIf="isLoggedIn">Cerrar Sesion</a></li>
+        <li><a href="" (click)="logoutPress()" routerLink="/logout" *ngIf="isLoggedIn">Cerrar Sesion</a></li>
       </ul>
     </div>
   </nav>
