@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'; // Importa los módulos Component y OnInit desde @angular/core
 import { HttpClient } from '@angular/common/http'; // Importa el módulo HttpClient desde @angular/common/http
 
+
  // Reemplaza con la URL real de la API
 
 @Component({ // Define el componente ProductspageComponent
