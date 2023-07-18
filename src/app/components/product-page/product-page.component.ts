@@ -7,9 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product-page.component.html',
   styleUrls: ['./product-page.component.css']
 })
+
 export class ProductPageComponent implements OnInit {
   product: any;
   selectedImage: string = '';
+  quantity: number = 1;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
@@ -29,5 +31,29 @@ export class ProductPageComponent implements OnInit {
 
   selectImage(image: string) {
     this.selectedImage = image;
+  }
+
+  addToCart() {
+    const cartItem = {
+      productId: this.product.id,
+      quantity: 1
+    };
+
+    this.http.post('https://koajstoreapi.onrender.com/api/cart', cartItem)
+      .subscribe((response: any) => {
+        console.log('Item added to cart:', response);
+        // Aquí puedes agregar lógica adicional, como mostrar una notificación de éxito, actualizar el estado del carrito, etc.
+      });
+  }
+
+  increaseQuantity() {
+    if (this.quantity < this.product.stock)
+    this.quantity++;
+  }
+
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 }
