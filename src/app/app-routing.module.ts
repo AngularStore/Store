@@ -12,7 +12,7 @@ import { TokenGuardAdmin } from './guard/admin.guard';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent,},
+  {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
