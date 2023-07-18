@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';                // Importa la 
 export class ProductPageComponent implements OnInit {             // Exporta la clase ProductPageComponent e implementa la interfaz OnInit para inicializar el componente al cargar la página
   product: any;                                                   // Variable para almacenar los datos del producto obtenidos de la API de Koaj
   selectedImage: string = '';                                     // Inicializa selectedImage con un valor predeterminado vacío
+  quantity: number = 1;                                           // Inicializa quantity con un valor predeterminado de 1
 
   constructor(private http: HttpClient) {}                        // Inicializa la clase HttpClient para hacer peticiones HTTP           
 
@@ -28,5 +29,29 @@ export class ProductPageComponent implements OnInit {             // Exporta la 
 
   selectImage(image: string) {                                    // Función para seleccionar una imagen del producto
     this.selectedImage = image;                                   // Asigna la imagen seleccionada a la variable 'selectedImage'
+  }
+
+  addToCart() {
+    const cartItem = {
+      productId: this.product.id,
+      quantity: 1
+    };
+
+    this.http.post('https://koajstoreapi.onrender.com/api/cart', cartItem)
+      .subscribe((response: any) => {
+        console.log('Item added to cart:', response);
+        // Aquí puedes agregar lógica adicional, como mostrar una notificación de éxito, actualizar el estado del carrito, etc.
+      });
+  }
+
+  increaseQuantity() {
+    if (this.quantity < this.product.stock)
+    this.quantity++;
+  }
+
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 }

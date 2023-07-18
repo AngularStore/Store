@@ -14,7 +14,12 @@
       <p class="descriptionText">{{ product.description }}</p>  <!-- {{ product.description }} para que se muestre la descripcion del producto -->
       <div class="below">                       <!-- contenedor de precio y boton -->
         <p class="price">${{ product.price }}</p> <!-- {{ product.price }} para que se muestre el precio del producto -->
-        <a href="#" class="btn-primary">Add to cart</a> <!-- boton -->
+        <div class="quantity">
+          <button (click)="decreaseQuantity()">-</button>
+          <span>{{ quantity }}</span>
+          <button (click)="increaseQuantity()">+</button>
+        </div>
+        <a href="#" class="btn-primary" (click)="addToCart()">Add to cart</a> <!-- boton -->
       </div>                                    <!-- fin contenedor de precio y boton -->
     </div>
 
