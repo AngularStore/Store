@@ -43,6 +43,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatTable} from '@angular/material/table';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     LogoutComponent,
     DashboardComponent,
     InventoryTableComponent,
-    CarouselComponent
+    CarouselComponent,
+    CartComponent,
+    CartItemComponent
   ],
   imports: [
     FormsModule,

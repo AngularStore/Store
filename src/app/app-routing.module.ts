@@ -13,6 +13,8 @@ import { TokenGuardAdmin } from './guard/admin.guard';
 import { WelcomeComponent} from './components/welcome/welcome.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductFormComponent } from './components/dashboard/product-form/product-form.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +28,9 @@ const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'dashboard', component: DashboardComponent,   canActivate: [TokenGuardAdmin]},
   { path: 'dashboard/editar/:id', component: ProductFormComponent,  canActivate: [TokenGuardAdmin]},
+  {path: 'successfulPay', component: SuccessfulPayComponent},
+  {path: 'product-form', component: ProductFormComponent},
+  {path: 'cart', component: CartComponent},
 ];
 
 @NgModule({
