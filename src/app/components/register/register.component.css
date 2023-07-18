@@ -1,11 +1,12 @@
 .registerContainer {
     background-color: white; /* Establece el color de fondo del contenedor en blanco */
     width: 100vw; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
-    height: 100vh; /* Establece la altura del contenedor al 100% de la altura de la ventana */
+    height: 80vh; /* Establece la altura del contenedor al 100% de la altura de la ventana */
     display: flex; /* Hace que el contenedor sea un contenedor flexible */
     justify-content: center; /* Centra el contenido horizontalmente dentro del contenedor */
     align-items: center; /* Centra el contenido verticalmente dentro del contenedor */
-}
+    margin-bottom: 50px;
+}   
 
 .titleRegisterContainer {
     text-align: center; /* Centra el texto dentro del contenedor */
