@@ -32,7 +32,10 @@
         </div>
         <!-- Botón de registro -->
         <div class="buttonRegisterContainer">
-          <button type="submit" id="buttonRegister" [disabled]="!myForm.form.valid">Register</button>
+          <button type="submit" id="buttonRegister" [disabled]="!myForm.form.valid">Registrar</button>
+        </div>
+        <div class="buttonRegisterContainer">
+          <button type="submit" id="buttonRegister" routerLink="login">Volver atras</button>
         </div>
       </form>
 
