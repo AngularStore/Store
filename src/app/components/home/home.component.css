@@ -3,7 +3,7 @@
     width: 93.23%; /* Modifica el ancho del elemento */
     display: flex; /* Convierte el contenedor en un contenedor flexible */
     position: relative; /* Establece la posición relativa del elemento */
-    top: 100px; /* Modifica la posición vertical del elemento respecto al borde superior de la página */
+
 }
 
 .descriptionHome {
@@ -36,7 +36,7 @@
     opacity: 1; /* Establece la opacidad del botón */
     text-align: center; /* Alinea el texto al centro */
     font: normal normal bold 1.2vw/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
-    letter-spacing: 0px; /* Modifica el espaciado entre caracteres */
+    letter-spacing: 0px; /* Modifica el espaciadorelativere caracteres */
     color: #FFFFFF; /* Modifica el color del texto del botón */
     opacity: 1; /* Establece la opacidad del botón */
     pointer-events: all;
@@ -61,13 +61,14 @@
   display: inline-flex; /* Modifica el tipo de visualización del elemento */
   flex-direction: column; /* Modifica la dirección del flex container */
   position: relative; /* Modifica la posición del elemento */
-  left: 10%; /* Modifica la posición horizontal del elemento */
+  left: 32.5%; /* Modifica la posición horizontal del elemento */
   top: 5%; /* Modifica la posición vertical del elemento */
   padding: 0%; /* Modifica el relleno interno del elemento */
 }
 
 .triangleOne {
-  position: relative; /* Modifica la posición del elemento */
+  position: absolute; /* Modifica la posición del elemento */
+  right: 1px;
   width: 0; /* Modifica el ancho del elemento */
   height: 0; /* Modifica la altura del elemento */
   border-right: 158px solid transparent; /* Modifica el borde derecho */
@@ -78,21 +79,23 @@
 
 .triangleTwo {
   position: absolute; /* Modifica la posición del elemento */
+  right: 1px;
   width: 0; /* Modifica el ancho del elemento */
   height: 0; /* Modifica la altura del elemento */
   border-right: 123px solid transparent; /* Modifica el borde derecho */
   border-bottom: 34vh solid #474545; /* Modifica el borde inferior */
-  margin-left: 78%; /* Modifica el margen izquierdo del elemento */
   transform: rotate(180deg); /* Modifica la rotación del elemento */
 }
 
 .triangleThree {
   position: absolute; /* Modifica la posición del elemento */
+  top: 1px;
+  right: 0px;
   width: 0; /* Modifica el ancho del elemento */
   height: 0; /* Modifica la altura del elemento */
   border-right: 85px solid transparent; /* Modifica el borde derecho */
   border-bottom: 33vh solid #000000; /* Modifica el borde inferior */
-  margin-left: 102%; /* Modifica el margen izquierdo del elemento */
+  /*margin-left: 102%; /* Modifica el margen izquierdo del elemento */
   transform: rotate(180deg); /* Modifica la rotación del elemento */
 }
 
@@ -161,6 +164,7 @@
       font: normal normal bold 10px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
   }
 }
+
 .carousel{
   position: fixed;
   width: 100%;
