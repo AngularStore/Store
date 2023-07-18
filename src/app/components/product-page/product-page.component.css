@@ -9,6 +9,26 @@
     border: 2px solid rgb(0, 0, 0);                       /* Borde solido para el seleccionado */                    
 }
 
+/*------------------CANTIDAD DE ITEMS------------------*/
+
+.quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .quantity span {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
 /*------------------CONTENEDOR PRINCIPAL------------------*/
 
 .principalContainer {                                       /* Contenedor principal */
