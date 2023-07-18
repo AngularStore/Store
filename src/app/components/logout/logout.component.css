@@ -1,13 +1,10 @@
 /* Estilos para el componente de cierre de sesión */
 .mainBoxLogOut {
+  margin: 0 auto;
   margin-top: 10%;
   /* linea de codigo para que el componente se ubique en la parte superior de la pagina */
-  margin-left: 38%;
-  /* linea de codigo para que el componente se ubique en la parte izquierda de la pagina */
-  width: 20%;
+  width: 30%;
   /* linea de codigo para que el componente tenga un ancho del 20% */
-  min-width: 300px;
-  /* linea de codigo para que el componente tenga un ancho minimo de 300px */
   display: flex;
   /* linea de codigo para que el componente sea flexible */
   flex-direction: column;
@@ -16,11 +13,9 @@
   /* linea de codigo para que el componente se ubique en el centro de la pagina */
   align-items: center;
   /* linea de codigo para que el componente se ubique en el centro de la pagina */
-  height: 100%;
-  /* linea de codigo para que el componente tenga un alto del 100% */
   border: 1px solid gray;
   /* linea de codigo para que el componente tenga un borde de 1px de color gris */
-  border-radius: 10%;
+  border-radius: 2em;
   /* linea de codigo para que el componente tenga un borde redondeado del 10% */
   font-family: Helvetica;
   /* linea de codigo para que el componente tenga una fuente de letra Helvetica */
@@ -82,7 +77,7 @@
   /* linea de codigo para que el componente tenga un tamaño de letra de 1.5rem */
   font-family: Helvetica;
   /* linea de codigo para que el componente tenga una fuente de letra Helvetica */
-  margin: 10px 50px 50px 50px;
+  margin: 10px 5% 5% 5%;
   /* linea de codigo para que el componente tenga un margen de 10px en la parte superior, 50px en la parte derecha, 50px en la parte inferior y 50px en la parte izquierda */
   justify-content: center;
   /* linea de codigo para que el componente se ubique en el centro de la pagina */
@@ -143,109 +138,12 @@
 /* Media queries para pantallas pequeñas */
 @media screen and (max-width: 730px) {
   .mainBoxLogOut {
-    width: 40%;
+    width: 50%;
     /* linea de codigo para que el componente tenga un ancho del 40% */
     height: 50%;
     /* linea de codigo para que el componente tenga un alto del 50% */
-    margin-left: 20%;
-    /* linea de codigo para que el componente tenga un margen izquierdo del 20% */
     border: 5px 5px 5px 5px;
     /* linea de codigo para que el componente tenga un borde de 5px */
   }
 
-  .logoLogOut {
-    font-size: 1rem;
-    /* linea de codigo para que el componente tenga un tamaño de letra de 1rem, rem sirve para que el tamaño de la letra se adapte a la pantalla */
-    height: 20px;
-    /* linea de codigo para que el componente tenga un alto de 20px */
-    margin: 10px 0px 30px 0px;
-    /* linea de codigo para que el componente tenga un margen de 10px en la parte superior, 0px en la parte derecha, 30px en la parte inferior y 0px en la parte izquierda */
   }
-
-  .logoLogOut p {
-    margin: 0px 0px 6px 0px;
-    /* linea de codigo para que el componente tenga un margen de 0px en la parte superior, 0px en la parte derecha, 6px en la parte inferior y 0px en la parte izquierda */
-  }
-
-  .textLogOut p {
-    font-size: 18px;
-    /* linea de codigo para que el componente tenga un tamaño de letra de 18px */
-  }
-
-  .buttonLogOut {
-    width: 70%;
-    /* linea de codigo para que el componente tenga un ancho del 70% */
-  }
-}
-
-/* Media queries para pantallas aún más pequeñas (móviles) */
-@media screen and (max-width: 480px) {
-  .mainBoxLogOut {
-    width: 60%;
-    /* linea de codigo para que el componente tenga un ancho del 60% */
-    margin-left: 5%;
-    /* linea de codigo para que el componente tenga un margen izquierdo del 5% */
-  }
-
-  .logoLogOut {
-    font-size: 1rem;
-    /* linea de codigo para que el componente tenga un tamaño de letra de 1rem */
-    height: 30px;
-    /* linea de codigo para que el componente tenga un alto de 30px */
-    margin: 10px 0px 20px 0px;
-    /* linea de codigo para que el componente tenga un margen de 10px en la parte superior, 0px en la parte derecha, 20px en la parte inferior y 0px en la parte izquierda */
-  }
-
-  .logoLogOut p {
-    margin: 0px 0px 6px 0px;
-    /* linea de codigo para que el componente tenga un margen de 0px en la parte superior, 0px en la parte derecha, 6px en la parte inferior y 0px en la parte izquierda */
-  }
-
-  .textLogOut p {
-    font-size: 16px;
-    /* linea de codigo para que el componente tenga un tamaño de letra de 16px */
-  }
-
-  .buttonLogOut {
-    width: 80%;
-    /* linea de codigo para que el componente tenga un ancho del 80% */
-  }
-}
-
-@media screen and (max-width: 655px) {
-  .mainBoxLogOut {
-    width: 90%;
-    /* linea de codigo para que el componente tenga un ancho del 90% */
-    margin-left: 5%;
-    /* linea de codigo para que el componente tenga un margen izquierdo del 5% */
-  }
-
-  .logoLogOut {
-    font-size: 1rem;
-    /* linea de codigo para que el componente tenga un tamaño de letra de 1rem */
-    height: 30px;
-    /* linea de codigo para que el componente tenga un alto de 30px */
-    margin: 10px 0px 20px 0px;
-    /* linea de codigo para que el componente tenga un margen de 10px en la parte superior, 0px en la parte derecha, 20px en la parte inferior y 0px en la parte izquierda */
-  }
-
-  .logoLogOut p {
-    margin: 0px 0px 6px 0px;
-    /* linea de codigo para que el componente tenga un margen de 0px en la parte superior, 0px en la parte derecha, 6px en la parte inferior y 0px en la parte izquierda */
-  }
-
-  .textLogOut p {
-    font-size: 16px;
-    /* linea de codigo para que el componente tenga un tamaño de letra de 16px */
-  }
-
-  .buttonLogOut {
-    width: 80%;
-    /* linea de codigo para que el componente tenga un ancho del 80% */
-  }
-}
-
-.p1 {
-  text-align: center;
-  /* linea de codigo para que el componente tenga un texto centrado */
-}

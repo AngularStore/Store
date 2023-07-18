@@ -1,6 +1,6 @@
 .mainBox {
-  margin-top: 10%; /* Margen superior del 10% del contenedor padre */
-  margin-left: 30%; /* Margen izquierdo del 30% del contenedor padre */
+  margin: 0 auto;
+  margin-top: 10%;
   width: 35%; /* Ancho del 35% del contenedor padre */
   min-width: 300px; /* Evita que el componente sea más pequeño que 300px de ancho */
   display: flex; /* Aplica el modelo de caja flexible */
@@ -9,10 +9,11 @@
   align-items: center; /* Centra horizontalmente los elementos internos */
   height: 50%; /* Altura del 50% del contenedor padre */
   border: 1px solid gray; /* Agrega un borde de 1px de grosor y color gris */
-  border-radius: 10%; /* Agrega un radio de borde del 10% */
+  border-radius: 2em; /* Agrega un radio de borde del 10% */
   font-family: Helvetica; /* Establece la fuente del texto como Helvetica */
   box-shadow: 0px 10px 8px 0px black; /* Agrega una sombra al contenedor */
-  margin-bottom: 15px; /* Margen inferior de 15px */
+  margin-bottom: 10vh; /* Margen inferior de 15px */
+
 }
 
 .number, .notFound, .koaj, .image {
@@ -21,6 +22,8 @@
 }
 
 .koaj {
+  display: flex; /* Aplica el modelo de caja flexible */
+  justify-content: center; /* Centra horizontalmente los elementos internos */
   background-color: black; /* Establece el color de fondo como negro */
   color: white; /* Establece el color del texto como blanco */
   font-size: 1rem; /* Establece el tamaño de fuente como 1rem */
@@ -28,7 +31,7 @@
   min-width: 100px; /* Asegura que el texto "KOAJ" no se colapse en pantallas pequeñas */
   height: 60%; /* Altura del 60% del contenedor padre */
   margin: 0px 0px 40px 0px; /* Margen de 0px arriba, 0px derecha, 40px abajo y 0px izquierda */
-  border-radius: 10%; /* Agrega un radio de borde del 10% */
+  border-radius: 2em; /* Agrega un radio de borde del 10% */
   align-items: center; /* Centra horizontalmente los elementos internos */
 }
 
@@ -43,49 +46,4 @@
   font-weight: bold; /* Establece el estilo de fuente como negrita */
 }
 
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .mainBox {
-    width: 80%; /* Reduce el ancho del componente en pantallas pequeñas */
-    margin-left: 10%; /* Reduce el margen izquierdo en pantallas pequeñas */
-  }
 
-  .number {
-    font-size: 40px; /* Reduce el tamaño de fuente en pantallas pequeñas */
-    height: 60px; /* Reduce la altura en pantallas pequeñas */
-  }
-
-  .notFound {
-    font-size: 24px; /* Reduce el tamaño de fuente en pantallas pequeñas */
-  }
-
-  .koaj {
-    width: 40%; /* Reduce el ancho del componente en pantallas pequeñas */
-    height: 40px; /* Reduce la altura en pantallas pequeñas */
-  }
-}
-
-/* Estilos para pantallas aún más pequeñas (móviles) */
-@media screen and (max-width: 480px) {
-  .mainBox {
-    width: 90%; /* Reduce el ancho del componente en pantallas móviles */
-    margin-left: 5%; /* Reduce el margen izquierdo en pantallas móviles */
-  }
-
-  .number {
-    font-size: 32px; /* Reduce el tamaño de fuente en pantallas móviles */
-    height: 50px; /* Reduce la altura en pantallas móviles */
-  }
-
-  .notFound {
-    font-size: 20px; /* Reduce el tamaño de fuente en pantallas móviles */
-  }
-
-  .koaj {
-    padding: 0 0 15px 0; /* Agrega un relleno de 0px arriba, 0px derecha, 15px abajo y 0px izquierda */
-    align-content: center; /* Centra verticalmente los elementos internos */
-    width: 30%; /* Reduce el ancho del componente en pantallas móviles */
-    height: 40px; /* Reduce la altura en pantallas móviles */
-    align-items: center; /* Centra horizontalmente los elementos internos */
-  }
-}
