@@ -17,19 +17,21 @@ export class LoginComponent {
   constructor(private authService: AuthService, private localStorageService: LocalStorageService, private router: Router) { }
 
   login(): void {
-    this.authService.login(this.username, this.password)
-      .subscribe(
-        response => {
-          // Aquí puedes manejar la respuesta de la API después de verificar el acceso
+    this.authService.login(this.username, this.password).subscribe(
+      response => {
+        if (response && response.token) {
           let tokenDsencripted = parseJwt(response.token);
-          this.localStorageService.setItem('token', tokenDsencripted)
+          this.localStorageService.setItem('token', tokenDsencripted);
           this.router.navigate(['']);
-        },
-        error => {
-          // Aquí puedes manejar el error de la API en caso de autenticación fallida
-          console.error(error);
+        } else {
+          // Manejar el caso en el que no se reciba un token en la respuesta
+          alert("Error al iniciar sesión, las credenciales no coinciden");
         }
-      );
+      },
+      error => {
+        
+        console.error(error);
+      }
+    );
   }
 }
-
