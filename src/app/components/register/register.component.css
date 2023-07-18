@@ -110,3 +110,39 @@
     background: #000000; /* Establece el color de fondo del botón en negro */
     border-radius: 10px; /* Establece el radio de borde en 10px, creando bordes redondeados */
 }
+
+
+/* Estilos para dispositivos móviles (Samsung A10 y similares) */
+@media screen and (max-width: 680px) {
+    .registerContainer {
+      padding: 10px;
+    }
+  
+    .titleRegisterContainer {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+  
+    .principalRegisterContainer {
+      width: 95%;
+      height: 100%;
+    }
+  
+    .buttonRegisterContainer {
+      width: 80%;
+    }
+  
+    .usernameRegisterContainer,
+    .paswordRegisterContainer,
+    .fullNameRegisterContainer,
+    .emailRegisterContainer,
+    .phoneRegisterContainer,
+    .adressRegisterContainer {
+      width: 80%;
+      margin: 5px 0;
+    }
+  
+    .buttonRegisterContainer button {
+      height: 30px;
+    }
+  }
