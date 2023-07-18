@@ -31,6 +31,7 @@ import { MatOptionModule} from '@angular/material/core';
 import { MatSelectModule} from '@angular/material/select';
 import { MatInputModule} from '@angular/material/input';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ProductFormComponent } from './components/product-form/product-form.com
     FooterComponent,
     NotFoundComponent,
     SuccessfulPayComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    WelcomeComponent
   ],
   imports: [
     FormsModule,
