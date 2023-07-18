@@ -164,3 +164,45 @@
       font: normal normal bold 10px/30px Helvetica; /* Modifica la fuente, el tamaño y el interlineado del texto del botón */
   }
 }
+
+.carousel{
+  position: fixed;
+  width: 100%;
+  top: 100px;
+}
+
+.carrouselContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+  transform-origin: bottom center;
+  margin: 0 10px; /* Espacio entre los triángulos */
+}
+
+/* Rotación de los triángulos */
+.triangle-up.rotated {
+  transform: rotate(45deg);
+}
+
+/* Contenedor para los triángulos superiores */
+.triangles-container-top {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Ajusta el espacio desde la parte superior del slider */
+}
+
+/* Contenedor para los triángulos inferiores */
+.triangles-container-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Ajusta el espacio desde la parte inferior del slider */
+}

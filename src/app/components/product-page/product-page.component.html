@@ -1,7 +1,7 @@
 <app-nav></app-nav>
-<div class="container" *ngIf="product">         <!-- *ngIf="product" para que no se muestre el componente hasta que se haya cargado el producto -->
+<div class="container" *ngIf="product" >         <!-- *ngIf="product" para que no se muestre el componente hasta que se haya cargado el producto -->
   
-  <div class="principalContainer">              <!-- contenedor principal-->
+  <div class="principalContainer" >              <!-- contenedor principal-->
     
     <div class="images">                        <!-- contenedor de imagenes -->         
       <img class="mainImage" [src]="selectedImage || product.productImages[0].imageURL" alt="Card image cap"> <!-- [src]="selectedImage || product.productImages[0].imageURL" para que se muestre la imagen seleccionada o la primera imagen del array -->
@@ -20,7 +20,7 @@
           <span>{{ quantity }}</span>
           <button (click)="increaseQuantity()">+</button>
         </div>
-        <a href="#" class="btn-primary" (click)="addToCart()">Add to cart</a> <!-- boton -->
+        <a class="btn-primary" (click)="addToCart()">Add to cart</a> <!-- boton -->
       </div>                                    <!-- fin contenedor de precio y boton -->
     </div>
   </div>

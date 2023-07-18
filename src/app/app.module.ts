@@ -32,6 +32,8 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatInputModule} from '@angular/material/input';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     NotFoundComponent,
     SuccessfulPayComponent,
     ProductFormComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    LogoutComponent,
+    CarouselComponent
   ],
   imports: [
     FormsModule,
