@@ -36,7 +36,7 @@ const routes: Routes = [
   //{ path: 'paymentStatus/userId', canActivate: [TokenGuard,TokenGuardAdmin]}
   {path: 'paymentStatus/:userID', component: SuccessfulPayComponent},
   {path: 'product-form', component: ProductFormComponent},
-  {path: 'cart', component: CartComponent},
+  {path: 'cart', component: CartComponent, canActivate:[TokenGuard]},
   {path: 'notFound', component: NotFoundComponent},
   //Path made for the rest of pages that are not found
   {path: '**', pathMatch: 'full', redirectTo: 'notFound'}
